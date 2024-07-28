@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>管理员登录</title>
+  <link rel="stylesheet" href="/static/component/element-plus/element-plus.css"/>
+  <link rel="stylesheet" href="/static/component/common/common.css"/>
+  <script src="/static/component/vue/vue.js"></script>
+  <script src="/static/component/element-plus/element-plus.js"></script>
+  <script src="/static/component/element-plus/element-plus-icon.js"></script>
+  <script src="/static/component/axios/axios.js"></script>
+  <script src="/static/component/common/common.js"></script>
+  <style>
+      :root {
+          --login-box-bg-color: #ffffff;
+          --login-box-padding: 20px;
+          --login-box-shadow: 0 0 #0000, 0 0 #0000, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+          --login-box-radius: 5px;
+          --login-box-width: 90%;
+          --login-box-max-width: 350px;
+          --login-box-form-item-input-width: 300px;
+      }
+
+      body {
+          background-color: rgba(65, 88, 208, 0.7);
+          background-image: linear-gradient(43deg, rgba(65, 88, 208, 0.7) 0%, rgba(200, 80, 192, 0.7) 46%, rgba(255, 204, 112, 0.7) 100%);
+      }
+
+      .container {
+          width: 100vw;
+          height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+
+      .container__login {
+          background: var(--login-box-bg-color);
+          padding: var(--login-box-padding);
+          box-shadow: var(--login-box-shadow);
+          border-radius: var(--login-box-radius);
+          width: var(--login-box-width);
+          max-width: var(--login-box-max-width);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+      }
+
+      .container__login__title {
+          text-align: center;
+          width: 100%;
+      }
+
+      .container__login__item__input {
+          width: var(--login-box-form-item-input-width);
+      }
+  </style>
+</head>
+<body>
+<div id="app">
+  <div class="container">
+    <div class="container__login">
+      <el-form ref="ruleFormRef" :model="ruleForm" :rules="rules" label-width="auto">
+        <el-form-item>
+          <h2 class="container__login__title">管理员登录</h2>
+        </el-form-item>
+        <el-form-item prop="username">
+          <el-input class="container__login__item__input" v-model="ruleForm.username" placeholder="请输入用户名">
+            <template #prefix>
+              <el-icon>
+                <User></User>
+              </el-icon>
+            </template>
+          </el-input>
+        </el-form-item>
+        <el-form-item prop="password">
+          <el-input type="password" class="container__login__item__input" v-model="ruleForm.password" placeholder="请输入密码">
+            <template #prefix>
+              <el-icon>
+                <Lock></Lock>
+              </el-icon>
+            </template>
+          </el-input>
+        </el-form-item>
+        <el-form-item>
+          <el-button class="container__login__item__input" type="primary" :loading="submitFormLoading"
+                     @click="submitForm(ruleFormRef)">立即登录
+          </el-button>
+        </el-form-item>
+      </el-form>
+    </div>
+  </div>
+</div>
+<script>
+    const { createApp, ref, reactive } = Vue
+    const common = new Common()
+    const { setRootStyleVar, http } = common
+
+    const app = createApp({
+        setup() {
+            const ruleFormRef = ref(null)
+            const ruleForm = reactive({
+                username: "",
+                password: "",
+            })
+
+            const rules = reactive({
+                username: [
+                    { required: true, message: "请输入用户名", trigger: "blur" },
+                ],
+                password: [
+                    { required: true, message: "请输入密码", trigger: "blur" },
+                ],
+            })
+
+            const submitFormLoading = ref(false)
+
+            async function submitForm(formEl) {
+                if (!formEl) return
+                await formEl.validate((valid, fields) => {
+                    if (!valid) {
+                        if (fields && Object.values(fields).length > 0) {
+                            ElementPlus.ElMessage({
+                                type: "error",
+                                message: Object.values(fields)[0][0].message || "验证失败, 请检查输入内容",
+                            })
+                        }
+                        return
+                    }
+
+                    submitFormLoading.value = true
+                    http.post("/admin/admin_user/login", ruleForm).then(res => {
+                        if (res.code === 200) {
+                            ElementPlus.ElMessage({
+                                type: "success",
+                                message: res.msg || "登陆成功",
+                                onClose: () => {
+                                    window.location.href = "/admin"
+                                }
+                            })
+                            return
+                        }
+
+                        ElementPlus.ElMessage({
+                            type: "error",
+                            message: res.msg || "服务器内部错误",
+                        })
+                    }).catch(err => {
+                        ElementPlus.ElMessage({
+                            type: "error",
+                            message: "服务器内部错误",
+                        })
+                    }).finally(() => {
+                        setTimeout(() => submitFormLoading.value = false, 1000)
+                    })
+                })
+            }
+
+            function login() {
+                ElementPlus.ElMessage({
+                    type: "success",
+                    message: "登陆成功",
+                })
+            }
+
+            return {
+                ruleFormRef,
+                ruleForm,
+                rules,
+                submitForm,
+                submitFormLoading,
+            }
+        },
+    })
+
+    for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
+        app.component(key, component)
+    }
+    app.use(ElementPlus)
+    app.mount("#app")
+</script>
+</body>
+</html>

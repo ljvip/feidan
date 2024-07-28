@@ -1,0 +1,2 @@
+[feidan-api]2024/05/23 - 14:40:31.187	[31merror[0m	D:/work/GoLandProject/feidan-api/core/server.go:23	net.Listen error: listen tcp :8000: bind: address already in use
+[feidan-api]2024/05/23 - 14:43:17.064	[31merror[0m	D:/work/GoLandProject/feidan-api/core/server.go:23	accept tcp [::]:8000: use of closed network connection

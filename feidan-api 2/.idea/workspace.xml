@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="870b644b-3e8a-48c2-aee8-9f278e39ae4a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/api/v1/bet/bet.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/v1/bet/enter.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/account/admin_user.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/account/platform_log.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/bet/request/bet.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/bet/response/bet.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/common/bet.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/router/bet/bet.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/router/bet/enter.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/bet/bet.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/bet/enter.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/bet.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1/enter.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1/enter.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/internal/cutter.go" beforeDir="false" afterPath="$PROJECT_DIR$/core/internal/cutter.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/global/model.go" beforeDir="false" afterPath="$PROJECT_DIR$/global/model.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/initialize/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/initialize/router.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/account/platform.go" beforeDir="false" afterPath="$PROJECT_DIR$/model/account/platform.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/router/enter.go" beforeDir="false" afterPath="$PROJECT_DIR$/router/enter.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/account/account.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/account/account.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/enter.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/enter.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/directory.go" beforeDir="false" afterPath="$PROJECT_DIR$/utils/directory.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/validator.go" beforeDir="false" afterPath="$PROJECT_DIR$/utils/validator.go" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" url="file://$PROJECT_DIR$/../../../environment/go122" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2gK3bCaF00nzXmsDdoZpbP8IhnC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.format.on.save.advertiser.fired&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/work/GoLandProject/feidan-api&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\work\GoLandProject\feidan-api\model\account" />
+      <recent name="D:\work\GoLandProject\feidan-api\router" />
+      <recent name="D:\work\GoLandProject\feidan-api\model\bet\response" />
+      <recent name="D:\work\GoLandProject\feidan-api\api\v1\bet" />
+      <recent name="D:\work\GoLandProject\feidan-api\service\bet" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\work\GoLandProject\feidan-api\api\v1\bet" />
+      <recent name="D:\work\GoLandProject\feidan-api\api\v1\account" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="GoApplicationRunConfiguration" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Go Test.TestName in feidan-api">
+    <configuration name="go build feidan-api" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="feidan-api" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="feidan-api" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/main.go" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestName in feidan-api" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="feidan-api" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="feidan-api" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestName\E$" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build feidan-api" />
+        <item itemvalue="Go Test.TestName in feidan-api" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VgoProject">
+    <settings-migrated>true</settings-migrated>
+  </component>
+</project>

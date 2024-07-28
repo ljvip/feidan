@@ -1,0 +1,615 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>管理后台-对接账户</title>
+  <link rel="stylesheet" href="/static/component/element-plus/element-plus.css"/>
+  <link rel="stylesheet" href="/static/component/common/common.css"/>
+  <link rel="stylesheet" href="/static/view/admin/layout/layout.css"/>
+  <script src="/static/view/admin/layout/layout.js"></script>
+  <script src="/static/component/vue/vue.js"></script>
+  <script src="/static/component/element-plus/element-plus.js"></script>
+  <script src="/static/component/element-plus/element-plus-icon.js"></script>
+  <script src="/static/component/axios/axios.js"></script>
+  <script src="/static/component/common/common.js"></script>
+  <style>
+      :root {
+          --content-bg-color: #ffffff;
+          --content-padding: 20px;
+          --content-shadow: 0 0 #0000, 0 0 #0000, 0 2px 3px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+          --content-border-radius: 5px;
+      }
+
+      .container {
+          display: flex;
+      }
+
+      .container__content {
+          width: 100%;
+          max-width: 1200px;
+          margin: 0 auto;
+          background: var(--content-bg-color);
+          padding: var(--content-padding);
+          box-shadow: var(--content-shadow);
+          border-radius: var(--content-border-radius);
+      }
+  </style>
+</head>
+<body>
+<div id="app">
+  <div class="container">
+    {include file="/layout/menus"}
+    <div class="container__content">
+
+      <div class="table-tool">
+        {if session('admin_user')['id'] != 1}
+        <el-button type="primary" size="small" @click="openDrawer(0)">
+          新增数据
+        </el-button>
+        {/if}
+      </div>
+      <el-table :data="tableData" v-loading="tableLoading" empty-text="暂无数据~" stripe highlight-current-row>
+        <el-table-column fixed="left" prop="id" label="ID" min-width="60"></el-table-column>
+        <el-table-column prop="a_username" label="归属账户" min-width="100"></el-table-column>
+        <el-table-column prop="platform_name" label="平台名称" min-width="100"></el-table-column>
+        <el-table-column prop="username" label="平台账户" min-width="100"></el-table-column>
+        <el-table-column prop="password" label="平台密码" min-width="100"></el-table-column>
+        <el-table-column prop="balance" label="当前余额" min-width="100"></el-table-column>
+        <el-table-column prop="betting" label="还未结算" min-width="100"></el-table-column>
+        <el-table-column prop="result" label="今日收益" min-width="100">
+          <template #default="scope">
+            <el-tag :type="scope.row.result < 0 ? 'danger' : 'success'" disable-transitions>
+              {{ scope.row.result }}
+            </el-tag>
+          </template>
+        </el-table-column>
+        <el-table-column prop="ce" label="飞单代理" min-width="100"></el-table-column>
+        <el-table-column prop="redouble" label="飞单加倍" min-width="100">
+          <template #default="scope">
+            <el-tag :type="scope.row.redouble > 100 ? 'danger' : 'success'" disable-transitions>
+              {{ scope.row.redouble + '%' }}
+            </el-tag>
+          </template>
+        </el-table-column>
+        <el-table-column prop="redouble_profit" label="加倍止盈" min-width="100"></el-table-column>
+        <el-table-column prop="redouble_loss" label="加倍止损" min-width="100"></el-table-column>
+        <el-table-column
+            prop="online"
+            label="在线状态"
+            min-width="100">
+          <template #default="scope">
+            <el-tag :type="scope.row.online === 1 ? 'success' : 'info'" disable-transitions>
+              {{ scope.row.online === 1 ? "在线" : "离线" }}
+            </el-tag>
+          </template>
+        </el-table-column>
+        <el-table-column prop="offline_reason" label="离线原因" min-width="100">
+          <template #default="scope">
+            <el-tooltip
+                effect="dark"
+                :content="scope.row.offline_reason"
+                placement="top-start">
+              <el-text type="danger" disable-transitions truncated>
+                {{ scope.row.offline_reason }}
+              </el-text>
+            </el-tooltip>
+          </template>
+        </el-table-column>
+
+        <el-table-column
+            prop="auto_login"
+            label="自动重连"
+            min-width="100">
+          <template #default="scope">
+            <el-tag :type="scope.row.auto_login === 1 ? 'success' : 'info'" disable-transitions>
+              {{ scope.row.auto_login === 1 ? "开启" : "关闭" }}
+            </el-tag>
+          </template>
+        </el-table-column>
+
+        <el-table-column
+            prop="status"
+            label="状态"
+            min-width="100">
+          <template #default="scope">
+            <el-tag :type="scope.row.status === 1 ? 'success' : 'info'" disable-transitions>
+              {{ scope.row.status === 1 ? "正常" : "禁用" }}
+            </el-tag>
+          </template>
+        </el-table-column>
+
+        <el-table-column fixed="right" label="操作" min-width="260">
+          <template #default="scope">
+            <el-button link type="info" size="small" @click="getToken(scope.row.id)">
+              {{ scope.row.online === 1 ? '重登' : '登录' }}
+            </el-button>
+            <el-button link type="info" size="small" @click="getUserInfo(scope.row.id)">
+              刷新账户
+            </el-button>
+            <el-button link type="info" size="small" @click="getList(scope.row.id)">
+              报表
+            </el-button>
+            <el-button link type="primary" size="small" @click="openDrawer(scope.row.id)">
+              编辑
+            </el-button>
+            <el-popconfirm
+                confirm-button-text="确认删除"
+                cancel-button-text="我再想想"
+                cancel-button-type="info"
+                confirm-button-type="danger"
+                title="确定要删除这条数据吗?"
+                width="200"
+                icon=""
+                icon-color="red"
+                @confirm="defPlatform(scope.row.id)">
+              <template #reference>
+                <el-button link type="danger" size="small">
+                  删除
+                </el-button>
+              </template>
+            </el-popconfirm>
+          </template>
+        </el-table-column>
+      </el-table>
+
+      <!--分页-->
+      <div class="table-page">
+        <el-pagination background
+                       :hide-on-single-page="true"
+                       layout="prev, pager, next"
+                       :total="tableCount"
+                       @change="tableChange">
+        </el-pagination>
+      </div>
+
+      <!--抽屉-->
+      <el-drawer v-model="drawer" :show-close="false" :close-on-click-modal="false">
+        <template #default>
+          <el-form ref="drawerRuleFormRef" :model="drawerRuleForm" :rules="drawerRules" label-width="auto">
+            <el-form-item prop="platform_name" label="平台名称">
+              <el-input class="container__login__item__input" v-model="drawerRuleForm.platform_name"
+                        placeholder="请输入总监名称"></el-input>
+            </el-form-item>
+            <el-form-item prop="url" label="平台地址">
+              <el-input class="container__login__item__input" v-model="drawerRuleForm.url"
+                        placeholder="请输入平台地址"></el-input>
+            </el-form-item>
+            <el-form-item prop="username" label="平台账户">
+              <el-input class="container__login__item__input" v-model="drawerRuleForm.username"
+                        placeholder="请输入用户名"></el-input>
+            </el-form-item>
+            <el-form-item prop="password" label="平台密码">
+              <el-input class="container__login__item__input" v-model="drawerRuleForm.password"
+                        placeholder="请输入密码"></el-input>
+            </el-form-item>
+            <!--<el-form-item prop="ce" label="飞单代理">-->
+            <!--  <el-input class="container__login__item__input"-->
+            <!--  disabled-->
+            <!--  v-model="drawerRuleForm.ce"-->
+            <!--            placeholder="请输入代理标识, 多个用(,)分割"></el-input>-->
+            <!--</el-form-item>-->
+            <el-form-item prop="redouble" label="飞单加倍">
+              <el-input class="container__login__item__input"
+                        type="number"
+                        v-model="drawerRuleForm.redouble"
+                        placeholder="请输入加倍数字(%)"></el-input>
+            </el-form-item>
+            <!--<el-form-item prop="redouble_profit" label="加倍止盈">-->
+            <!--  <el-input class="container__login__item__input"-->
+            <!--            type="number" v-model="drawerRuleForm.redouble_profit"-->
+            <!--            placeholder="请输入止盈金额, 飞单不加倍时无效"></el-input>-->
+            <!--</el-form-item>-->
+            <!--<el-form-item prop="redouble_loss" label="加倍止损">-->
+            <!--  <el-input class="container__login__item__input"-->
+            <!--            type="number" v-model="drawerRuleForm.redouble_loss"-->
+            <!--            placeholder="请输入止盈止损, 飞单不加倍时无效"></el-input>-->
+            <!--</el-form-item>-->
+            <el-form-item prop="auto_login" label="自动重连">
+              <el-switch v-model="drawerRuleForm.auto_login"
+                         inline-prompt
+                         style="--el-switch-on-color: #13ce66;"
+                         :active-value="1"
+                         :inactive-value="0"
+                         active-text="开启"
+                         inactive-text="关闭">
+              </el-switch>
+            </el-form-item>
+            <el-form-item prop="auto_login" label="状态">
+              <el-switch v-model="drawerRuleForm.status"
+                         inline-prompt
+                         style="--el-switch-on-color: #13ce66;"
+                         :active-value="1"
+                         :inactive-value="0"
+                         active-text="正常"
+                         inactive-text="禁用">
+              </el-switch>
+            </el-form-item>
+          </el-form>
+
+        </template>
+        <template #footer>
+          <div style="flex: auto">
+            <el-button type="danger" @click="closeDrawer">取消更新</el-button>
+            <el-button type="primary" :loading="drawerSubmitLoading" @click="drawerSubmitForm(drawerRuleFormRef)">保存更新</el-button>
+          </div>
+        </template>
+      </el-drawer>
+
+      <!--报表-->
+      <el-dialog v-model="listDialogTableVisible" title="账户报表" width="1000px">
+        <el-table :data="list" v-loading="listTableLoading" empty-text="暂无数据~" show-summary
+                  sum-text="总计" stripe highlight-current-row height="500px">
+          <el-table-column prop="date" label="日期" min-width="100"></el-table-column>
+          <el-table-column prop="count" label="注数" min-width="100"></el-table-column>
+          <el-table-column prop="amount" label="金额" min-width="100"></el-table-column>
+          <el-table-column prop="realAmount" label="有效金额" min-width="100"></el-table-column>
+          <el-table-column prop="cma" label="佣金" min-width="100"></el-table-column>
+          <el-table-column prop="result" label="盈亏" min-width="100">
+            <template #default="scope">
+              <el-tag :type="scope.row.result < 0 ? 'danger' : 'success'" disable-transitions>
+                {{ scope.row.result }}
+              </el-tag>
+            </template>
+          </el-table-column>
+        </el-table>
+      </el-dialog>
+
+    </div>
+  </div>
+</div>
+<script>
+    const { createApp, ref, reactive } = Vue
+    const common = new Common()
+    const { setRootStyleVar, http } = common
+
+    const app = createApp({
+        setup() {
+            const tableLoading = ref(false)
+            const tableCount = ref(0)
+            const tableData = ref([])
+            const page = ref(1)
+            const limit = ref(10)
+            const drawer = ref(false)
+            const drawerType = ref("add") // add edit
+            const drawerRuleFormRef = ref(null)
+            const drawerRuleForm = reactive({})
+            const drawerSubmitLoading = ref(false)
+            const listDialogTableVisible = ref(false)
+            const list = ref([])
+            const listTableLoading = ref(false)
+
+            const drawerRules = reactive({
+                platform_name: [
+                    { required: true, message: "请输入平台名称", trigger: "blur" },
+                ],
+                url: [
+                    { required: true, message: "请输入平台地址", trigger: "blur" },
+                ],
+                username: [
+                    { required: true, message: "请输入用户名", trigger: "blur" },
+                ],
+                password: [
+                    { required: true, message: "请输入密码", trigger: "blur" },
+                ],
+                redouble: [
+                    { required: true, message: "如果不加倍需填写100", trigger: "blur" },
+                ],
+                redouble_profit: [
+                    { required: true, message: "止盈金额, 飞单加倍100时无效", trigger: "blur" },
+                ],
+                redouble_loss: [
+                    { required: true, message: "止损金额, 飞单加倍100时无效", trigger: "blur" },
+                ],
+            })
+
+            async function drawerSubmitForm(formEl) {
+                if (!formEl) return
+                await formEl.validate((valid, fields) => {
+                    if (!valid) {
+                        if (fields && Object.values(fields).length > 0) {
+                            ElementPlus.ElMessage({
+                                type: "error",
+                                message: Object.values(fields)[0][0].message || "验证失败, 请检查输入内容",
+                            })
+                        }
+                        return
+                    }
+
+                    let api = "/admin/platform/add"
+                    if (drawerType.value === "edit") api = "/admin/platform/edit"
+                    drawerSubmitLoading.value = true
+                    http.post(api, drawerRuleForm).then(res => {
+                        if (res.code === 200) {
+                            ElementPlus.ElMessage({
+                                type: "success",
+                                message: res.msg || "操作成功",
+                            })
+                            closeDrawer()
+                            getTableData()
+                            return
+                        }
+
+                        ElementPlus.ElMessage({
+                            type: "error",
+                            message: res.msg || "服务器内部错误",
+                        })
+                    }).catch(err => {
+                        ElementPlus.ElMessage({
+                            type: "error",
+                            message: "服务器内部错误",
+                        })
+                    }).finally(() => {
+                        setTimeout(() => drawerSubmitLoading.value = false, 1000)
+                    })
+                })
+            }
+
+            function defPlatform(id) {
+                if (id && id > 0) {
+                    tableLoading.value = true
+                    http.post("/admin/platform/del", {
+                        id
+                    }).then(res => {
+                        if (res.code === 200) {
+                            ElementPlus.ElMessage({
+                                type: "success",
+                                message: res.msg || "删除成功",
+                            })
+                            getTableData()
+                            return
+                        }
+
+                        ElementPlus.ElMessage({
+                            type: "error",
+                            message: res.msg || "服务器内部错误",
+                        })
+                    }).catch(err => {
+                        ElementPlus.ElMessage({
+                            type: "error",
+                            message: "服务器内部错误",
+                        })
+                    }).finally(() => {
+                        setTimeout(() => tableLoading.value = false, 1000)
+                    })
+                    return
+                }
+
+                ElementPlus.ElMessage({
+                    type: "error",
+                    message: "删除数据ID错误",
+                })
+            }
+
+            function tableChange(e) {
+                page.value = e
+                getTableData()
+            }
+
+            function openDrawer(id) {
+                if (id && id > 0) {
+                    drawerType.value = "edit"
+                    tableData.value.forEach((v, k) => {
+                        if (v.id === id) {
+                            drawerRuleForm.id = v.id
+                            drawerRuleForm.platform_name = v.platform_name
+                            drawerRuleForm.url = v.url
+                            drawerRuleForm.username = v.username
+                            drawerRuleForm.password = v.password
+                            drawerRuleForm.auto_login = v.auto_login
+                            drawerRuleForm.status = v.status
+                            drawerRuleForm.redouble = v.redouble
+                            drawerRuleForm.redouble_profit = v.redouble_profit
+                            drawerRuleForm.redouble_loss = v.redouble_loss
+                            drawerRuleForm.ce = v.ce
+                        }
+                    })
+                } else {
+                    drawerRuleForm.id = 0
+                    drawerRuleForm.platform_name = ''
+                    drawerRuleForm.url = ''
+                    drawerRuleForm.username = ''
+                    drawerRuleForm.password = ''
+                    drawerRuleForm.auto_login = 1
+                    drawerRuleForm.status = 1
+                    drawerRuleForm.redouble = 100
+                    drawerRuleForm.redouble_profit = 50000
+                    drawerRuleForm.redouble_loss = 50000
+                    drawerType.value = "add"
+                }
+                drawer.value = true
+            }
+
+            function closeDrawer() {
+                drawer.value = false
+            }
+
+            function getTableData() {
+                tableLoading.value = true
+                http.get("/admin/platform/select?page=" + page.value + "&limit=" + limit.value).then(res => {
+                    if (res.code === 200) {
+                        tableCount.value = res.data.count
+                        tableData.value = res.data.data
+                        return
+                    }
+
+                    ElementPlus.ElMessage({
+                        type: "error",
+                        message: res.msg || "服务器内部错误",
+                    })
+                }).catch(err => {
+                    ElementPlus.ElMessage({
+                        type: "error",
+                        message: "服务器内部错误",
+                    })
+                }).finally(() => {
+                    setTimeout(() => tableLoading.value = false, 1000)
+                })
+            }
+
+            getTableData()
+
+            function getToken(id) {
+                tableLoading.value = true
+                http.post("/admin/platform/getToken", {
+                    id: id
+                }).then(res => {
+                    if (res.code === 200) {
+                        ElementPlus.ElMessage({
+                            type: "success",
+                            message: res.msg || "登陆成功",
+                        })
+                        return
+                    }
+
+                    ElementPlus.ElMessage({
+                        type: "error",
+                        message: res.msg || "服务器内部错误",
+                    })
+                }).catch(err => {
+                    ElementPlus.ElMessage({
+                        type: "error",
+                        message: "服务器内部错误",
+                    })
+                }).finally(() => {
+                    getTableData()
+                    setTimeout(() => tableLoading.value = false, 1000)
+                })
+            }
+
+            function getUserInfo(id) {
+                tableLoading.value = true
+                http.post("/admin/platform/getUserInfo", {
+                    id: id
+                }).then(res => {
+                    if (res.code === 200) {
+                        ElementPlus.ElMessage({
+                            type: "success",
+                            message: res.msg || "获取成功",
+                        })
+                        return
+                    }
+
+                    ElementPlus.ElMessage({
+                        type: "error",
+                        message: res.msg || "服务器内部错误",
+                    })
+                }).catch(err => {
+                    ElementPlus.ElMessage({
+                        type: "error",
+                        message: "服务器内部错误",
+                    })
+                }).finally(() => {
+                    getTableData()
+                    setTimeout(() => tableLoading.value = false, 1000)
+                })
+            }
+
+            function structureListData(data) {
+                list.value = []
+                data.forEach((v,k)=>{
+                    list.value.push({
+                        date: timestampToTime(v.drawDate), // 日期
+                        count: v.count || '0', // 注数
+                        amount: v.amount || '0.0', // 金额
+                        realAmount: v.realAmount || '0.0', // 有效金额
+                        cma: v.cma || '0.0', // 佣金
+                        result: v.result || '0.0', // 盈亏
+                    })
+                })
+            }
+
+            function getWeek(d) {
+                let week;
+                if(d.getDay() === 0) week = "星期日"
+                if(d.getDay() === 1) week = "星期一"
+                if(d.getDay() === 2) week = "星期二"
+                if(d.getDay() === 3) week = "星期三"
+                if(d.getDay() === 4) week = "星期四"
+                if(d.getDay() === 5) week = "星期五"
+                if(d.getDay() === 6) week = "星期六"
+                return week;
+            }
+
+            function timestampToTime(timestamp) {
+                const date = new Date(timestamp);
+                const year = date.getFullYear();
+                const month = (date.getMonth() + 1).toString().padStart(2, '0');
+                const day = date.getDate().toString().padStart(2, '0');
+                const hour = date.getHours().toString().padStart(2, '0');
+                const minute = date.getMinutes().toString().padStart(2, '0');
+                const second = date.getSeconds().toString().padStart(2, '0');
+                const d = `${year}-${month}-${day}`;
+                return `${d} ${getWeek(new Date(d))}`
+            }
+
+            function getList(id) {
+                listTableLoading.value = true
+                listDialogTableVisible.value = true
+
+                http.post('/admin/platform/getList', {
+                    id
+                }).then(res=>{
+                    console.log(res)
+                    if (res.code === 200) {
+                        ElementPlus.ElMessage({
+                            type: "success",
+                            message: res.msg || "获取成功",
+                        })
+                        structureListData(res.data)
+                        return
+                    }
+
+                    ElementPlus.ElMessage({
+                        type: "error",
+                        message: res.msg || "服务器内部错误",
+                    })
+                    listDialogTableVisible.value = false
+                }).catch(err => {
+                    console.log(err)
+                    listDialogTableVisible.value = false
+                    ElementPlus.ElMessage({
+                        type: "error",
+                        message: "服务器内部错误",
+                    })
+                }).finally(() => {
+                    setTimeout(() => listTableLoading.value = false, 1000)
+                })
+            }
+
+            return {
+                tableData,
+                tableCount,
+                tableLoading,
+                tableChange,
+                drawer,
+                openDrawer,
+                closeDrawer,
+                drawerRuleFormRef,
+                drawerRuleForm,
+                drawerRules,
+                drawerSubmitForm,
+                drawerSubmitLoading,
+                defPlatform,
+                getToken,
+                getUserInfo,
+                getList,
+                listDialogTableVisible,
+                list,
+                listTableLoading
+            }
+        }
+
+        ,
+    })
+
+    for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
+        app.component(key, component)
+    }
+    app.use(ElementPlus)
+    app.mount("#app")
+</script>
+</body>
+</html>

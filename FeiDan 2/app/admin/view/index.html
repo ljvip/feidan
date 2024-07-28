@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>管理后台-控制台</title>
+  <link rel="stylesheet" href="/static/component/element-plus/element-plus.css"/>
+  <link rel="stylesheet" href="/static/component/common/common.css"/>
+  <link rel="stylesheet" href="/static/view/admin/layout/layout.css"/>
+  <script src="/static/view/admin/layout/layout.js"></script>
+  <script src="/static/component/vue/vue.js"></script>
+  <script src="/static/component/element-plus/element-plus.js"></script>
+  <script src="/static/component/element-plus/element-plus-icon.js"></script>
+  <script src="/static/component/axios/axios.js"></script>
+  <script src="/static/component/common/common.js"></script>
+  <style>
+      :root {
+          --content-bg-color: #ffffff;
+          --content-padding: 20px;
+          --content-shadow: 0 0 #0000, 0 0 #0000, 0 2px 3px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+          --content-border-radius: 5px;
+      }
+
+      .container {
+          display: flex;
+      }
+
+      .container__content {
+          width: 100%;
+          max-width: 1200px;
+          margin: 0 auto;
+          /*background: var(--content-bg-color);*/
+          /*padding: var(--content-padding);*/
+          /*box-shadow: var(--content-shadow);*/
+          /*border-radius: var(--content-border-radius);*/
+      }
+
+      .card {
+          display: flex;
+          flex-wrap: wrap;
+          cursor: default;
+          user-select: none;
+      }
+
+      .card__item {
+          width: 200px;
+          margin: 20px 20px 0 0;
+      }
+
+      /*.card__item:first-child {*/
+      /*    margin-left: 0;*/
+      /*}*/
+
+      /*.card__item:last-child {*/
+      /*    margin-right: 0;*/
+      /*}*/
+
+      .card__item__title {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+      }
+  </style>
+</head>
+<body>
+<div id="app">
+  <div class="container">
+    {include file="/layout/menus"}
+    <div class="container__content">
+      <div class="card">
+        <el-card class="card__item" shadow="hover">
+          <div class="card__item__title">
+            <el-text size="large">飞单账户</el-text>
+            <el-tag>3个</el-tag>
+          </div>
+        </el-card>
+        <el-card class="card__item" shadow="hover">
+          <div class="card__item__title">
+            <el-text size="large">在线账户</el-text>
+            <el-tag type="success">2个</el-tag>
+          </div>
+        </el-card>
+        <el-card class="card__item" shadow="hover">
+          <div class="card__item__title">
+            <el-text size="large">离线账户</el-text>
+            <el-tag type="danger">1个</el-tag>
+          </div>
+        </el-card>
+        <el-card class="card__item" shadow="hover">
+          <div class="card__item__title">
+            <el-text size="large">今日飞单</el-text>
+            <el-tag type="default">203次</el-tag>
+          </div>
+        </el-card>
+        <el-card class="card__item" shadow="hover">
+          <div class="card__item__title">
+            <el-text size="large">今日登录</el-text>
+            <el-tag type="warning">23次</el-tag>
+          </div>
+        </el-card>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+    const { createApp, ref, reactive } = Vue
+    const common = new Common()
+    const { setRootStyleVar, http } = common
+
+    const app = createApp({
+        setup() {
+            return {}
+        },
+    })
+
+    for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
+        app.component(key, component)
+    }
+    app.use(ElementPlus)
+    app.mount("#app")
+</script>
+</body>
+</html>

@@ -1,0 +1,1445 @@
+您正在使用gin模式的GIN_MODE环境名称,config的路径为config.yaml
+
+2024/05/13 04:26:53 [35mD:/work/GoLandProject/feidan-api/initialize/gorm_mysql.go:25
+[0m[31m[error] [0mfailed to initialize database, got error Error 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (3 handlers)
+[feidan-api]2024/05/13 - 04:26:53.224	[34minfo[0m	D:/work/GoLandProject/feidan-api/initialize/router.go:51	register swagger handler
+[GIN-debug] GET    /api/v1/account/getToken  --> feidan-api/api/v1/account.(*AccountApi).GetToken-fm (3 handlers)
+[GIN-debug] POST   /api/v1/account/getToken  --> feidan-api/api/v1/account.(*AccountApi).GetToken-fm (3 handlers)
+[GIN-debug] PUT    /api/v1/account/getToken  --> feidan-api/api/v1/account.(*AccountApi).GetToken-fm (3 handlers)
+[GIN-debug] PATCH  /api/v1/account/getToken  --> feidan-api/api/v1/account.(*AccountApi).GetToken-fm (3 handlers)
+[GIN-debug] HEAD   /api/v1/account/getToken  --> feidan-api/api/v1/account.(*AccountApi).GetToken-fm (3 handlers)
+[GIN-debug] OPTIONS /api/v1/account/getToken  --> feidan-api/api/v1/account.(*AccountApi).GetToken-fm (3 handlers)
+[GIN-debug] DELETE /api/v1/account/getToken  --> feidan-api/api/v1/account.(*AccountApi).GetToken-fm (3 handlers)
+[GIN-debug] CONNECT /api/v1/account/getToken  --> feidan-api/api/v1/account.(*AccountApi).GetToken-fm (3 handlers)
+[GIN-debug] TRACE  /api/v1/account/getToken  --> feidan-api/api/v1/account.(*AccountApi).GetToken-fm (3 handlers)
+[GIN-debug] GET    /api/v1/account/getUserInfo --> feidan-api/api/v1/account.(*AccountApi).GetUserInfo-fm (3 handlers)
+[GIN-debug] POST   /api/v1/account/getUserInfo --> feidan-api/api/v1/account.(*AccountApi).GetUserInfo-fm (3 handlers)
+[GIN-debug] PUT    /api/v1/account/getUserInfo --> feidan-api/api/v1/account.(*AccountApi).GetUserInfo-fm (3 handlers)
+[GIN-debug] PATCH  /api/v1/account/getUserInfo --> feidan-api/api/v1/account.(*AccountApi).GetUserInfo-fm (3 handlers)
+[GIN-debug] HEAD   /api/v1/account/getUserInfo --> feidan-api/api/v1/account.(*AccountApi).GetUserInfo-fm (3 handlers)
+[GIN-debug] OPTIONS /api/v1/account/getUserInfo --> feidan-api/api/v1/account.(*AccountApi).GetUserInfo-fm (3 handlers)
+[GIN-debug] DELETE /api/v1/account/getUserInfo --> feidan-api/api/v1/account.(*AccountApi).GetUserInfo-fm (3 handlers)
+[GIN-debug] CONNECT /api/v1/account/getUserInfo --> feidan-api/api/v1/account.(*AccountApi).GetUserInfo-fm (3 handlers)
+[GIN-debug] TRACE  /api/v1/account/getUserInfo --> feidan-api/api/v1/account.(*AccountApi).GetUserInfo-fm (3 handlers)
+[GIN-debug] GET    /api/v1/getList           --> feidan-api/api/v1/account.(*AccountApi).GetList-fm (3 handlers)
+[GIN-debug] POST   /api/v1/getList           --> feidan-api/api/v1/account.(*AccountApi).GetList-fm (3 handlers)
+[GIN-debug] PUT    /api/v1/getList           --> feidan-api/api/v1/account.(*AccountApi).GetList-fm (3 handlers)
+[GIN-debug] PATCH  /api/v1/getList           --> feidan-api/api/v1/account.(*AccountApi).GetList-fm (3 handlers)
+[GIN-debug] HEAD   /api/v1/getList           --> feidan-api/api/v1/account.(*AccountApi).GetList-fm (3 handlers)
+[GIN-debug] OPTIONS /api/v1/getList           --> feidan-api/api/v1/account.(*AccountApi).GetList-fm (3 handlers)
+[GIN-debug] DELETE /api/v1/getList           --> feidan-api/api/v1/account.(*AccountApi).GetList-fm (3 handlers)
+[GIN-debug] CONNECT /api/v1/getList           --> feidan-api/api/v1/account.(*AccountApi).GetList-fm (3 handlers)
+[GIN-debug] TRACE  /api/v1/getList           --> feidan-api/api/v1/account.(*AccountApi).GetList-fm (3 handlers)
+[GIN-debug] GET    /api/auto_login           --> feidan-api/api/v1/account.(*AccountApi).AutoLogin-fm (3 handlers)
+[GIN-debug] POST   /api/auto_login           --> feidan-api/api/v1/account.(*AccountApi).AutoLogin-fm (3 handlers)
+[GIN-debug] PUT    /api/auto_login           --> feidan-api/api/v1/account.(*AccountApi).AutoLogin-fm (3 handlers)
+[GIN-debug] PATCH  /api/auto_login           --> feidan-api/api/v1/account.(*AccountApi).AutoLogin-fm (3 handlers)
+[GIN-debug] HEAD   /api/auto_login           --> feidan-api/api/v1/account.(*AccountApi).AutoLogin-fm (3 handlers)
+[GIN-debug] OPTIONS /api/auto_login           --> feidan-api/api/v1/account.(*AccountApi).AutoLogin-fm (3 handlers)
+[GIN-debug] DELETE /api/auto_login           --> feidan-api/api/v1/account.(*AccountApi).AutoLogin-fm (3 handlers)
+[GIN-debug] CONNECT /api/auto_login           --> feidan-api/api/v1/account.(*AccountApi).AutoLogin-fm (3 handlers)
+[GIN-debug] TRACE  /api/auto_login           --> feidan-api/api/v1/account.(*AccountApi).AutoLogin-fm (3 handlers)
+[GIN-debug] POST   /api/v1/bet               --> feidan-api/api/v1/bet.(*BetApi).Bet-fm (3 handlers)
+[GIN-debug] GET    /api/outFly               --> feidan-api/api/v1/bet.(*BetApi).OutFly-fm (3 handlers)
+[GIN-debug] POST   /api/outFly               --> feidan-api/api/v1/bet.(*BetApi).OutFly-fm (3 handlers)
+[GIN-debug] PUT    /api/outFly               --> feidan-api/api/v1/bet.(*BetApi).OutFly-fm (3 handlers)
+[GIN-debug] PATCH  /api/outFly               --> feidan-api/api/v1/bet.(*BetApi).OutFly-fm (3 handlers)
+[GIN-debug] HEAD   /api/outFly               --> feidan-api/api/v1/bet.(*BetApi).OutFly-fm (3 handlers)
+[GIN-debug] OPTIONS /api/outFly               --> feidan-api/api/v1/bet.(*BetApi).OutFly-fm (3 handlers)
+[GIN-debug] DELETE /api/outFly               --> feidan-api/api/v1/bet.(*BetApi).OutFly-fm (3 handlers)
+[GIN-debug] CONNECT /api/outFly               --> feidan-api/api/v1/bet.(*BetApi).OutFly-fm (3 handlers)
+[GIN-debug] TRACE  /api/outFly               --> feidan-api/api/v1/bet.(*BetApi).OutFly-fm (3 handlers)
+[feidan-api]2024/05/13 - 04:26:53.224	[34minfo[0m	D:/work/GoLandProject/feidan-api/initialize/router.go:60	router register success
+[GIN-debug] GET    /form-generator/*filepath --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /form-generator/*filepath --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[feidan-api]2024/05/13 - 04:26:53.224	[34minfo[0m	D:/work/GoLandProject/feidan-api/core/server.go:21	server run success on 	{"address": ":9000"}
+2024/05/13 04:26:53 11505 :9000
+
+
+[31m2024/05/13 04:54:44 [Recovery] 2024/05/13 - 04:54:44 panic recovered:
+GET /api/auto_login HTTP/1.1
+Host: 52.193.51.52:9000
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Cache-Control: no-cache
+Connection: keep-alive
+Content-Length: 21
+Content-Type: application/json
+Postman-Token: 6b6dd1c5-187b-4f77-ab79-cee5797e2c55
+User-Agent: PostmanRuntime/7.37.3
+
+
+runtime error: invalid memory address or nil pointer dereference
+D:/environment/go122/src/runtime/panic.go:261 (0x453ad7)
+D:/environment/go122/src/runtime/signal_unix.go:881 (0x453aa5)
+D:/environment/gopath/pkg/mod/gorm.io/gorm@v1.25.9/gorm.go:399 (0x8d1df2)
+D:/environment/gopath/pkg/mod/gorm.io/gorm@v1.25.9/finisher_api.go:163 (0x8ca755)
+D:/work/GoLandProject/feidan-api/service/account/account.go:241 (0xa7c0d6)
+D:/work/GoLandProject/feidan-api/api/v1/account/account.go:55 (0xa89e88)
+D:/environment/gopath/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174 (0xa709fc)
+D:/environment/gopath/pkg/mod/github.com/gin-gonic/gin@v1.9.1/logger.go:240 (0xa709e3)
+D:/environment/gopath/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174 (0xa718b9)
+D:/environment/gopath/pkg/mod/github.com/gin-gonic/gin@v1.9.1/recovery.go:102 (0xa718a7)
+D:/environment/gopath/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174 (0xa6feed)
+D:/environment/gopath/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:620 (0xa6fb7c)
+D:/environment/gopath/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:576 (0xa6f6b1)
+D:/environment/go122/src/net/http/server.go:3137 (0x74426d)
+D:/environment/go122/src/net/http/server.go:2039 (0x73f627)
+D:/environment/go122/src/runtime/asm_amd64.s:1695 (0x471620)
+[0m
+您正在使用gin模式的GIN_MODE环境名称,config的路径为config.yaml
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (3 handlers)
+[feidan-api]2024/05/13 - 04:59:45.253	[34minfo[0m	D:/work/GoLandProject/feidan-api/initialize/router.go:51	register swagger handler
+[GIN-debug] GET    /api/v1/account/getToken  --> feidan-api/api/v1/account.(*AccountApi).GetToken-fm (3 handlers)
+[GIN-debug] POST   /api/v1/account/getToken  --> feidan-api/api/v1/account.(*AccountApi).GetToken-fm (3 handlers)
+[GIN-debug] PUT    /api/v1/account/getToken  --> feidan-api/api/v1/account.(*AccountApi).GetToken-fm (3 handlers)
+[GIN-debug] PATCH  /api/v1/account/getToken  --> feidan-api/api/v1/account.(*AccountApi).GetToken-fm (3 handlers)
+[GIN-debug] HEAD   /api/v1/account/getToken  --> feidan-api/api/v1/account.(*AccountApi).GetToken-fm (3 handlers)
+[GIN-debug] OPTIONS /api/v1/account/getToken  --> feidan-api/api/v1/account.(*AccountApi).GetToken-fm (3 handlers)
+[GIN-debug] DELETE /api/v1/account/getToken  --> feidan-api/api/v1/account.(*AccountApi).GetToken-fm (3 handlers)
+[GIN-debug] CONNECT /api/v1/account/getToken  --> feidan-api/api/v1/account.(*AccountApi).GetToken-fm (3 handlers)
+[GIN-debug] TRACE  /api/v1/account/getToken  --> feidan-api/api/v1/account.(*AccountApi).GetToken-fm (3 handlers)
+[GIN-debug] GET    /api/v1/account/getUserInfo --> feidan-api/api/v1/account.(*AccountApi).GetUserInfo-fm (3 handlers)
+[GIN-debug] POST   /api/v1/account/getUserInfo --> feidan-api/api/v1/account.(*AccountApi).GetUserInfo-fm (3 handlers)
+[GIN-debug] PUT    /api/v1/account/getUserInfo --> feidan-api/api/v1/account.(*AccountApi).GetUserInfo-fm (3 handlers)
+[GIN-debug] PATCH  /api/v1/account/getUserInfo --> feidan-api/api/v1/account.(*AccountApi).GetUserInfo-fm (3 handlers)
+[GIN-debug] HEAD   /api/v1/account/getUserInfo --> feidan-api/api/v1/account.(*AccountApi).GetUserInfo-fm (3 handlers)
+[GIN-debug] OPTIONS /api/v1/account/getUserInfo --> feidan-api/api/v1/account.(*AccountApi).GetUserInfo-fm (3 handlers)
+[GIN-debug] DELETE /api/v1/account/getUserInfo --> feidan-api/api/v1/account.(*AccountApi).GetUserInfo-fm (3 handlers)
+[GIN-debug] CONNECT /api/v1/account/getUserInfo --> feidan-api/api/v1/account.(*AccountApi).GetUserInfo-fm (3 handlers)
+[GIN-debug] TRACE  /api/v1/account/getUserInfo --> feidan-api/api/v1/account.(*AccountApi).GetUserInfo-fm (3 handlers)
+[GIN-debug] GET    /api/v1/getList           --> feidan-api/api/v1/account.(*AccountApi).GetList-fm (3 handlers)
+[GIN-debug] POST   /api/v1/getList           --> feidan-api/api/v1/account.(*AccountApi).GetList-fm (3 handlers)
+[GIN-debug] PUT    /api/v1/getList           --> feidan-api/api/v1/account.(*AccountApi).GetList-fm (3 handlers)
+[GIN-debug] PATCH  /api/v1/getList           --> feidan-api/api/v1/account.(*AccountApi).GetList-fm (3 handlers)
+[GIN-debug] HEAD   /api/v1/getList           --> feidan-api/api/v1/account.(*AccountApi).GetList-fm (3 handlers)
+[GIN-debug] OPTIONS /api/v1/getList           --> feidan-api/api/v1/account.(*AccountApi).GetList-fm (3 handlers)
+[GIN-debug] DELETE /api/v1/getList           --> feidan-api/api/v1/account.(*AccountApi).GetList-fm (3 handlers)
+[GIN-debug] CONNECT /api/v1/getList           --> feidan-api/api/v1/account.(*AccountApi).GetList-fm (3 handlers)
+[GIN-debug] TRACE  /api/v1/getList           --> feidan-api/api/v1/account.(*AccountApi).GetList-fm (3 handlers)
+[GIN-debug] GET    /api/auto_login           --> feidan-api/api/v1/account.(*AccountApi).AutoLogin-fm (3 handlers)
+[GIN-debug] POST   /api/auto_login           --> feidan-api/api/v1/account.(*AccountApi).AutoLogin-fm (3 handlers)
+[GIN-debug] PUT    /api/auto_login           --> feidan-api/api/v1/account.(*AccountApi).AutoLogin-fm (3 handlers)
+[GIN-debug] PATCH  /api/auto_login           --> feidan-api/api/v1/account.(*AccountApi).AutoLogin-fm (3 handlers)
+[GIN-debug] HEAD   /api/auto_login           --> feidan-api/api/v1/account.(*AccountApi).AutoLogin-fm (3 handlers)
+[GIN-debug] OPTIONS /api/auto_login           --> feidan-api/api/v1/account.(*AccountApi).AutoLogin-fm (3 handlers)
+[GIN-debug] DELETE /api/auto_login           --> feidan-api/api/v1/account.(*AccountApi).AutoLogin-fm (3 handlers)
+[GIN-debug] CONNECT /api/auto_login           --> feidan-api/api/v1/account.(*AccountApi).AutoLogin-fm (3 handlers)
+[GIN-debug] TRACE  /api/auto_login           --> feidan-api/api/v1/account.(*AccountApi).AutoLogin-fm (3 handlers)
+[GIN-debug] POST   /api/v1/bet               --> feidan-api/api/v1/bet.(*BetApi).Bet-fm (3 handlers)
+[GIN-debug] GET    /api/outFly               --> feidan-api/api/v1/bet.(*BetApi).OutFly-fm (3 handlers)
+[GIN-debug] POST   /api/outFly               --> feidan-api/api/v1/bet.(*BetApi).OutFly-fm (3 handlers)
+[GIN-debug] PUT    /api/outFly               --> feidan-api/api/v1/bet.(*BetApi).OutFly-fm (3 handlers)
+[GIN-debug] PATCH  /api/outFly               --> feidan-api/api/v1/bet.(*BetApi).OutFly-fm (3 handlers)
+[GIN-debug] HEAD   /api/outFly               --> feidan-api/api/v1/bet.(*BetApi).OutFly-fm (3 handlers)
+[GIN-debug] OPTIONS /api/outFly               --> feidan-api/api/v1/bet.(*BetApi).OutFly-fm (3 handlers)
+[GIN-debug] DELETE /api/outFly               --> feidan-api/api/v1/bet.(*BetApi).OutFly-fm (3 handlers)
+[GIN-debug] CONNECT /api/outFly               --> feidan-api/api/v1/bet.(*BetApi).OutFly-fm (3 handlers)
+[GIN-debug] TRACE  /api/outFly               --> feidan-api/api/v1/bet.(*BetApi).OutFly-fm (3 handlers)
+[feidan-api]2024/05/13 - 04:59:45.253	[34minfo[0m	D:/work/GoLandProject/feidan-api/initialize/router.go:60	router register success
+[GIN-debug] GET    /form-generator/*filepath --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /form-generator/*filepath --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[feidan-api]2024/05/13 - 04:59:45.253	[34minfo[0m	D:/work/GoLandProject/feidan-api/core/server.go:21	server run success on 	{"address": ":8000"}
+2024/05/13 04:59:45 12133 :8000
+
+2024/05/13 05:00:47 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.531ms] [34;1m[rows:0][0m SELECT * FROM `platform`
+[GIN] 2024/05/13 - 05:00:47 | 200 |     591.031µs |     59.33.65.93 | GET      "/api/auto_login"
+[GIN] 2024/05/13 - 05:26:26 | 404 |         113ns |  35.203.211.240 | GET      "/"
+
+2024/05/13 05:37:08 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.308ms] [34;1m[rows:0][0m SELECT * FROM `platform`
+[GIN] 2024/05/13 - 05:37:08 | 200 |     368.126µs |     1.162.45.29 | GET      "/api/auto_login"
+[GIN] 2024/05/13 - 05:40:02 | 200 |       171.6µs |       127.0.0.1 | POST     "/api/v1/getList"
+[GIN] 2024/05/13 - 05:40:12 | 200 |  1.334022347s |       127.0.0.1 | POST     "/api/v1/account/getToken"
+[GIN] 2024/05/13 - 05:40:12 | 200 |  139.793318ms |       127.0.0.1 | POST     "/api/v1/account/getUserInfo"
+[GIN] 2024/05/13 - 05:40:15 | 200 |  142.763562ms |       127.0.0.1 | POST     "/api/v1/account/getUserInfo"
+[GIN] 2024/05/13 - 05:40:18 | 200 |  151.316772ms |       127.0.0.1 | POST     "/api/v1/getList"
+[GIN] 2024/05/13 - 05:40:22 | 200 |  131.318903ms |       127.0.0.1 | POST     "/api/v1/getList"
+
+2024/05/13 05:41:55 [32mD:/work/GoLandProject/feidan-api/service/bet/bet.go:63
+[0m[33m[0.422ms] [34;1m[rows:1][0m SELECT `id` FROM `admin_user` WHERE username = ('666k5')
+
+2024/05/13 05:41:55 [32mD:/work/GoLandProject/feidan-api/service/bet/bet.go:68
+[0m[33m[0.288ms] [34;1m[rows:1][0m SELECT * FROM `platform` WHERE admin_user_id in (2)
+
+2024/05/13 05:41:55 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.506ms] [34;1m[rows:1][0m UPDATE `platform` SET `balance`='85.2',`betting`='0.00',`result`='0.00' WHERE id = 1 or token = 'b6e9deecaa8d6d80669ff032bc0823a7bc57ff73'
+
+2024/05/13 05:41:55 [32mD:/work/GoLandProject/feidan-api/service/bet/bet.go:132
+[0m[33m[3.447ms] [34;1m[rows:1][0m INSERT INTO `platform_log` (`create_time`,`update_time`,`admin_user_id`,`url`,`username`,`send`,`input`) VALUES ('2024-05-13 05:41:55.728','2024-05-13 05:41:55.728',2,'https://6203715498-hy.tcr195uhyru.com','666m2','{"token":"b6e9deecaa8d6d80669ff032bc0823a7bc57ff73","rows":"1","ce":"666k5","data":[{"code":"168_xysc","issue":"20240513047","list":[{"pum":"1000000","amount":"1","log":""},{"pum":"1000000","amount":"2","log":""}]}],"url":"https://6203715498-hy.tcr195uhyru.com","version":"v1"}','')
+
+2024/05/13 05:41:55 [32mD:/work/GoLandProject/feidan-api/service/bet/bet.go:138
+[0m[33m[3.239ms] [34;1m[rows:1][0m UPDATE `platform` SET `polling`=polling + 1 WHERE id = 1
+
+2024/05/13 05:41:56 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.637ms] [34;1m[rows:1][0m UPDATE `platform` SET `balance`='82.2',`betting`='3',`result`='0.00' WHERE id = 0 or token = 'b6e9deecaa8d6d80669ff032bc0823a7bc57ff73'
+
+2024/05/13 05:41:56 [32mD:/work/GoLandProject/feidan-api/service/bet/bet.go:146
+[0m[33m[2.637ms] [34;1m[rows:1][0m UPDATE `platform_log` SET `input`='{"data":{"state":1,"success":[{"code":"168_xysc","issue":"20240513047","list":[{"pum":"1000000","amount":"1","log":""},{"pum":"1000000","amount":"2","log":""}]}],"failure":[]},"info":{"balance":82.2,"betting":3,"maxLimit":85.2,"result":0,"type":0}}' WHERE id = 1
+[GIN] 2024/05/13 - 05:41:56 | 200 |  540.745359ms |     1.162.45.29 | POST     "/api/outFly?token=f3785tg3b48f237fg8243yt5"
+[GIN] 2024/05/13 - 05:43:27 | 404 |         169ns | 149.154.161.202 | GET      "//api/outFly?token=f3785tg3b48f237fg8243yt5"
+[GIN] 2024/05/13 - 05:46:14 | 200 |      31.254µs | 182.239.115.139 | GET      "/api/outFly?token=f3785tg3b48f237fg8243yt5"
+[GIN] 2024/05/13 - 05:53:37 | 404 |          98ns |   47.242.24.122 | GET      "/phpMyAdmin/scripts/setup.php"
+[GIN] 2024/05/13 - 05:53:37 | 404 |          97ns |   47.242.24.122 | GET      "/phpmyadmin/scripts/setup.php"
+[GIN] 2024/05/13 - 05:53:37 | 404 |         103ns |   47.242.24.122 | GET      "/phpMyAdmin-2.11.4/scripts/setup.php"
+[GIN] 2024/05/13 - 05:53:37 | 404 |          81ns |   47.242.24.122 | GET      "/phpMyAdmin-2.11.3/scripts/setup.php"
+[GIN] 2024/05/13 - 05:53:38 | 404 |         114ns |   47.242.24.122 | GET      "/phpMyAdmin-2.10.0.2/scripts/setup.php"
+[GIN] 2024/05/13 - 05:53:38 | 404 |          77ns |   47.242.24.122 | GET      "/phpMyAdmin-2.10.3/scripts/setup.php"
+[GIN] 2024/05/13 - 05:53:38 | 404 |         107ns |   47.242.24.122 | GET      "/phpMyAdmin-2.8.0.2/scripts/setup.php"
+[GIN] 2024/05/13 - 05:53:38 | 404 |         100ns |   47.242.24.122 | GET      "/phpMyAdmin-2.10.2/scripts/setup.php"
+[GIN] 2024/05/13 - 05:53:38 | 404 |          87ns |   47.242.24.122 | GET      "/phpMyAdmin-2.11.9.2/scripts/setup.php"
+[GIN] 2024/05/13 - 05:53:38 | 404 |          73ns |   47.242.24.122 | GET      "/phpMyAdmin-2.11.0/scripts/setup.php"
+[GIN] 2024/05/13 - 05:53:38 | 404 |          72ns |   47.242.24.122 | GET      "/phpMyAdmin-2.11.7/scripts/setup.php"
+[GIN] 2024/05/13 - 05:53:38 | 404 |          91ns |   47.242.24.122 | GET      "/phpMyAdmin-2.11.1.2/scripts/setup.php"
+[GIN] 2024/05/13 - 05:53:38 | 404 |          95ns |   47.242.24.122 | GET      "/pma/scripts/setup.php"
+[GIN] 2024/05/13 - 05:53:38 | 404 |          76ns |   47.242.24.122 | GET      "/phpMyAdmin3/scripts/setup.php"
+[GIN] 2024/05/13 - 05:53:39 | 404 |         100ns |   47.242.24.122 | GET      "/myadmin/scripts/setup.php"
+[GIN] 2024/05/13 - 05:53:39 | 404 |         104ns |   47.242.24.122 | GET      "/MyAdmin/scripts/setup.php"
+[GIN] 2024/05/13 - 05:53:39 | 404 |          80ns |   47.242.24.122 | GET      "/PHPMYADMIN/scripts/setup.php"
+[GIN] 2024/05/13 - 05:53:39 | 404 |          78ns |   47.242.24.122 | GET      "/mysqladmin/scripts/setup.php"
+[GIN] 2024/05/13 - 05:53:39 | 404 |         101ns |   47.242.24.122 | GET      "/SQL/scripts/setup.php"
+[GIN] 2024/05/13 - 05:53:39 | 404 |          69ns |   47.242.24.122 | GET      "/phpMyAdmin-2.5.5-pl1/scripts/setup.php"
+[GIN] 2024/05/13 - 05:53:39 | 404 |          99ns |   47.242.24.122 | GET      "/phpMyAdmin-2.5.5/scripts/setup.php"
+[GIN] 2024/05/13 - 05:53:39 | 404 |          85ns |   47.242.24.122 | GET      "/phpMyAdmin-2.5.4/scripts/setup.php"
+[GIN] 2024/05/13 - 05:53:40 | 404 |         100ns |   47.242.24.122 | GET      "/phpMyAdmin-2.5.7-pl1/scripts/setup.php"
+[GIN] 2024/05/13 - 05:53:40 | 404 |         101ns |   47.242.24.122 | GET      "/admin/pma/scripts/setup.php"
+[GIN] 2024/05/13 - 05:53:40 | 404 |         123ns |   47.242.24.122 | GET      "/phpMyAdmin-2/scripts/setup.php"
+[GIN] 2024/05/13 - 05:53:40 | 404 |         110ns |   47.242.24.122 | GET      "/web/phpMyAdmin/scripts/setup.php"
+[GIN] 2024/05/13 - 05:53:40 | 404 |          89ns |   47.242.24.122 | GET      "/webadmin/scripts/setup.php"
+[GIN] 2024/05/13 - 05:53:40 | 404 |         132ns |   47.242.24.122 | GET      "/admin/scripts/setup.php"
+[GIN] 2024/05/13 - 05:53:40 | 404 |          94ns |   47.242.24.122 | GET      "/dbadmin/scripts/setup.php"
+[GIN] 2024/05/13 - 05:53:40 | 404 |          73ns |   47.242.24.122 | GET      "/mysql/scripts/setup.php"
+[GIN] 2024/05/13 - 05:53:40 | 404 |          75ns |   47.242.24.122 | GET      "/phpMyAdmin2/scripts/setup.php"
+[GIN] 2024/05/13 - 05:53:40 | 404 |          83ns |   47.242.24.122 | GET      "/phpma/scripts/setup.php"
+[GIN] 2024/05/13 - 05:53:41 | 404 |         314ns |   47.242.24.122 | GET      "/sqlweb/scripts/setup.php"
+[GIN] 2024/05/13 - 05:53:41 | 404 |         146ns |   47.242.24.122 | GET      "/webdb/scripts/setup.php"
+[GIN] 2024/05/13 - 05:53:41 | 404 |          89ns |   47.242.24.122 | GET      "/websql/scripts/setup.php"
+[GIN] 2024/05/13 - 05:53:41 | 404 |          81ns |   47.242.24.122 | GET      "/_phpMyAdmin/scripts/setup.php"
+[GIN] 2024/05/13 - 05:53:41 | 404 |         107ns |   47.242.24.122 | GET      "/php/scripts/setup.php"
+[GIN] 2024/05/13 - 05:53:41 | 404 |         120ns |   47.242.24.122 | GET      "/admin/phpmyadmin/scripts/setup.txt"
+[GIN] 2024/05/13 - 05:53:41 | 404 |          73ns |   47.242.24.122 | GET      "/db/scripts/setup.php"
+[GIN] 2024/05/13 - 05:53:41 | 404 |         107ns |   47.242.24.122 | GET      "/sqlmanager/scripts/setup.php"
+[GIN] 2024/05/13 - 05:53:41 | 404 |         112ns |   47.242.24.122 | GET      "/mysqlmanager/scripts/setup.php"
+[GIN] 2024/05/13 - 05:53:42 | 404 |         101ns |   47.242.24.122 | GET      "/phpmanager/scripts/setup.php"
+[GIN] 2024/05/13 - 05:53:42 | 404 |         164ns |   47.242.24.122 | GET      "/php-myadmin/scripts/setup.php"
+[GIN] 2024/05/13 - 05:53:42 | 404 |          72ns |   47.242.24.122 | GET      "/phpmy-admin/scripts/setup.php"
+[GIN] 2024/05/13 - 05:53:42 | 404 |          92ns |   47.242.24.122 | GET      "/mysql-admin/scripts/setup.php"
+[GIN] 2024/05/13 - 06:01:06 | 200 |   168.22634ms |       127.0.0.1 | POST     "/api/v1/account/getUserInfo"
+[GIN] 2024/05/13 - 06:01:11 | 200 |  904.898937ms |       127.0.0.1 | POST     "/api/v1/account/getToken"
+[GIN] 2024/05/13 - 06:01:11 | 200 |   89.383669ms |       127.0.0.1 | POST     "/api/v1/account/getUserInfo"
+
+2024/05/13 06:04:11 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.333ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 06:04:11 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.867ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 06:04:11 | 200 |  296.650271ms |     34.80.13.65 | GET      "/api/auto_login"
+
+2024/05/13 06:05:41 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.340ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 06:05:41 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.973ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 06:05:41 | 200 |  316.415276ms |     1.162.45.29 | GET      "/api/auto_login"
+[GIN] 2024/05/13 - 06:06:11 | 404 |         121ns | 149.154.161.221 | GET      "/api/auto_login这个使用"
+[GIN] 2024/05/13 - 06:06:14 | 404 |          95ns | 149.154.161.200 | GET      "/api/auto_login这个"
+[GIN] 2024/05/13 - 06:06:15 | 404 |         116ns | 149.154.161.216 | GET      "/api/auto_login这"
+[GIN] 2024/05/13 - 06:06:16 | 404 |         105ns | 149.154.161.202 | GET      "/api/a"
+[GIN] 2024/05/13 - 06:06:21 | 404 |          98ns | 149.154.161.220 | GET      "/api/auto_login用这个"
+
+2024/05/13 06:09:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.322ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 06:09:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.929ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 06:09:01 | 200 |  837.213412ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 06:18:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.324ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 06:18:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.679ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 06:18:02 | 200 |  209.586519ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 06:27:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.339ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 06:27:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[2.673ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 06:27:01 | 200 |  612.277174ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 06:36:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.328ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 06:36:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.789ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 06:36:02 | 200 |  318.548512ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 06:45:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.332ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 06:45:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.775ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 06:45:01 | 200 |  373.775259ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 06:46:36 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.532ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 06:46:37 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.751ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 06:46:37 | 200 |  171.345561ms |     34.80.13.65 | GET      "/api/auto_login"
+
+2024/05/13 06:54:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.324ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 06:54:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.608ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 06:54:01 | 200 |  170.630945ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 07:00:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.327ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 07:00:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.998ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 07:00:01 | 200 |  217.811144ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 07:09:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.330ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 07:09:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.821ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 07:09:02 | 200 |  168.213103ms |    52.193.51.52 | GET      "/api/auto_login"
+2024/05/13 07:11:36 12133 Received SIGHUP. forking.
+您正在使用gin模式的GIN_MODE环境名称,config的路径为config.yaml
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (3 handlers)
+[feidan-api]2024/05/13 - 07:11:36.908	[34minfo[0m	D:/work/GoLandProject/feidan-api/initialize/router.go:51	register swagger handler
+[GIN-debug] GET    /api/v1/account/getToken  --> feidan-api/api/v1/account.(*AccountApi).GetToken-fm (3 handlers)
+[GIN-debug] POST   /api/v1/account/getToken  --> feidan-api/api/v1/account.(*AccountApi).GetToken-fm (3 handlers)
+[GIN-debug] PUT    /api/v1/account/getToken  --> feidan-api/api/v1/account.(*AccountApi).GetToken-fm (3 handlers)
+[GIN-debug] PATCH  /api/v1/account/getToken  --> feidan-api/api/v1/account.(*AccountApi).GetToken-fm (3 handlers)
+[GIN-debug] HEAD   /api/v1/account/getToken  --> feidan-api/api/v1/account.(*AccountApi).GetToken-fm (3 handlers)
+[GIN-debug] OPTIONS /api/v1/account/getToken  --> feidan-api/api/v1/account.(*AccountApi).GetToken-fm (3 handlers)
+[GIN-debug] DELETE /api/v1/account/getToken  --> feidan-api/api/v1/account.(*AccountApi).GetToken-fm (3 handlers)
+[GIN-debug] CONNECT /api/v1/account/getToken  --> feidan-api/api/v1/account.(*AccountApi).GetToken-fm (3 handlers)
+[GIN-debug] TRACE  /api/v1/account/getToken  --> feidan-api/api/v1/account.(*AccountApi).GetToken-fm (3 handlers)
+[GIN-debug] GET    /api/v1/account/getUserInfo --> feidan-api/api/v1/account.(*AccountApi).GetUserInfo-fm (3 handlers)
+[GIN-debug] POST   /api/v1/account/getUserInfo --> feidan-api/api/v1/account.(*AccountApi).GetUserInfo-fm (3 handlers)
+[GIN-debug] PUT    /api/v1/account/getUserInfo --> feidan-api/api/v1/account.(*AccountApi).GetUserInfo-fm (3 handlers)
+[GIN-debug] PATCH  /api/v1/account/getUserInfo --> feidan-api/api/v1/account.(*AccountApi).GetUserInfo-fm (3 handlers)
+[GIN-debug] HEAD   /api/v1/account/getUserInfo --> feidan-api/api/v1/account.(*AccountApi).GetUserInfo-fm (3 handlers)
+[GIN-debug] OPTIONS /api/v1/account/getUserInfo --> feidan-api/api/v1/account.(*AccountApi).GetUserInfo-fm (3 handlers)
+[GIN-debug] DELETE /api/v1/account/getUserInfo --> feidan-api/api/v1/account.(*AccountApi).GetUserInfo-fm (3 handlers)
+[GIN-debug] CONNECT /api/v1/account/getUserInfo --> feidan-api/api/v1/account.(*AccountApi).GetUserInfo-fm (3 handlers)
+[GIN-debug] TRACE  /api/v1/account/getUserInfo --> feidan-api/api/v1/account.(*AccountApi).GetUserInfo-fm (3 handlers)
+[GIN-debug] GET    /api/v1/getList           --> feidan-api/api/v1/account.(*AccountApi).GetList-fm (3 handlers)
+[GIN-debug] POST   /api/v1/getList           --> feidan-api/api/v1/account.(*AccountApi).GetList-fm (3 handlers)
+[GIN-debug] PUT    /api/v1/getList           --> feidan-api/api/v1/account.(*AccountApi).GetList-fm (3 handlers)
+[GIN-debug] PATCH  /api/v1/getList           --> feidan-api/api/v1/account.(*AccountApi).GetList-fm (3 handlers)
+[GIN-debug] HEAD   /api/v1/getList           --> feidan-api/api/v1/account.(*AccountApi).GetList-fm (3 handlers)
+[GIN-debug] OPTIONS /api/v1/getList           --> feidan-api/api/v1/account.(*AccountApi).GetList-fm (3 handlers)
+[GIN-debug] DELETE /api/v1/getList           --> feidan-api/api/v1/account.(*AccountApi).GetList-fm (3 handlers)
+[GIN-debug] CONNECT /api/v1/getList           --> feidan-api/api/v1/account.(*AccountApi).GetList-fm (3 handlers)
+[GIN-debug] TRACE  /api/v1/getList           --> feidan-api/api/v1/account.(*AccountApi).GetList-fm (3 handlers)
+[GIN-debug] GET    /api/auto_login           --> feidan-api/api/v1/account.(*AccountApi).AutoLogin-fm (3 handlers)
+[GIN-debug] POST   /api/auto_login           --> feidan-api/api/v1/account.(*AccountApi).AutoLogin-fm (3 handlers)
+[GIN-debug] PUT    /api/auto_login           --> feidan-api/api/v1/account.(*AccountApi).AutoLogin-fm (3 handlers)
+[GIN-debug] PATCH  /api/auto_login           --> feidan-api/api/v1/account.(*AccountApi).AutoLogin-fm (3 handlers)
+[GIN-debug] HEAD   /api/auto_login           --> feidan-api/api/v1/account.(*AccountApi).AutoLogin-fm (3 handlers)
+[GIN-debug] OPTIONS /api/auto_login           --> feidan-api/api/v1/account.(*AccountApi).AutoLogin-fm (3 handlers)
+[GIN-debug] DELETE /api/auto_login           --> feidan-api/api/v1/account.(*AccountApi).AutoLogin-fm (3 handlers)
+[GIN-debug] CONNECT /api/auto_login           --> feidan-api/api/v1/account.(*AccountApi).AutoLogin-fm (3 handlers)
+[GIN-debug] TRACE  /api/auto_login           --> feidan-api/api/v1/account.(*AccountApi).AutoLogin-fm (3 handlers)
+[GIN-debug] POST   /api/v1/bet               --> feidan-api/api/v1/bet.(*BetApi).Bet-fm (3 handlers)
+[GIN-debug] GET    /api/outFly               --> feidan-api/api/v1/bet.(*BetApi).OutFly-fm (3 handlers)
+[GIN-debug] POST   /api/outFly               --> feidan-api/api/v1/bet.(*BetApi).OutFly-fm (3 handlers)
+[GIN-debug] PUT    /api/outFly               --> feidan-api/api/v1/bet.(*BetApi).OutFly-fm (3 handlers)
+[GIN-debug] PATCH  /api/outFly               --> feidan-api/api/v1/bet.(*BetApi).OutFly-fm (3 handlers)
+[GIN-debug] HEAD   /api/outFly               --> feidan-api/api/v1/bet.(*BetApi).OutFly-fm (3 handlers)
+[GIN-debug] OPTIONS /api/outFly               --> feidan-api/api/v1/bet.(*BetApi).OutFly-fm (3 handlers)
+[GIN-debug] DELETE /api/outFly               --> feidan-api/api/v1/bet.(*BetApi).OutFly-fm (3 handlers)
+[GIN-debug] CONNECT /api/outFly               --> feidan-api/api/v1/bet.(*BetApi).OutFly-fm (3 handlers)
+[GIN-debug] TRACE  /api/outFly               --> feidan-api/api/v1/bet.(*BetApi).OutFly-fm (3 handlers)
+[feidan-api]2024/05/13 - 07:11:36.909	[34minfo[0m	D:/work/GoLandProject/feidan-api/initialize/router.go:60	router register success
+[GIN-debug] GET    /form-generator/*filepath --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /form-generator/*filepath --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[feidan-api]2024/05/13 - 07:11:36.909	[34minfo[0m	D:/work/GoLandProject/feidan-api/core/server.go:21	server run success on 	{"address": ":8000"}
+2024/05/13 07:11:36 14380 :8000
+2024/05/13 07:11:36 12133 Received SIGTERM.
+2024/05/13 07:11:36 12133 Waiting for connections to finish...
+2024/05/13 07:11:36 12133 Serve() returning...
+[feidan-api]2024/05/13 - 07:11:36.909	[31merror[0m	D:/work/GoLandProject/feidan-api/core/server.go:23	accept tcp [::]:8000: use of closed network connection
+
+2024/05/13 07:18:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.515ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 07:18:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.972ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 07:18:01 | 200 |  205.432601ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 07:27:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.344ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 07:27:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.645ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 07:27:01 | 200 |  170.029716ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 07:36:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.311ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 07:36:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.912ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 07:36:01 | 200 |  193.949778ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 07:45:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.355ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 07:45:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.880ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 07:45:01 | 200 |  163.160183ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 07:54:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.315ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 07:54:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.946ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 07:54:02 | 200 |    169.8195ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 08:00:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.320ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 08:00:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.912ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 08:00:01 | 200 |  221.427612ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 08:09:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.335ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 08:09:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.970ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 08:09:01 | 200 |   177.32935ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 08:18:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.314ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 08:18:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.983ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 08:18:02 | 200 |  851.520275ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 08:27:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.318ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 08:27:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.932ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 08:27:01 | 200 |   179.36849ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 08:36:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.335ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 08:36:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.867ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 08:36:01 | 200 |  220.786974ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 08:45:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.327ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 08:45:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.949ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 08:45:02 | 200 |   177.68722ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 08:54:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.321ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 08:54:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.548ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 08:54:01 | 200 |  325.591632ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 09:00:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.340ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 09:00:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.735ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 09:00:01 | 200 |   333.07169ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 09:09:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.367ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 09:09:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[4.386ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 09:09:02 | 200 |  232.354979ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 09:18:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.335ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 09:18:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.925ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 09:18:01 | 200 |  534.489427ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 09:27:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.332ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 09:27:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.507ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 09:27:01 | 200 |  191.475447ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 09:36:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.321ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 09:36:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.995ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 09:36:02 | 200 |  228.906207ms |    52.193.51.52 | GET      "/api/auto_login"
+[GIN] 2024/05/13 - 09:41:24 | 404 |         331ns |   112.74.54.199 | GET      "/phpMyAdmin/scripts/setup.php"
+[GIN] 2024/05/13 - 09:41:24 | 404 |         247ns |   112.74.54.199 | GET      "/phpmyadmin/scripts/setup.php"
+[GIN] 2024/05/13 - 09:41:24 | 404 |          87ns |   112.74.54.199 | GET      "/phpMyAdmin-2.11.4/scripts/setup.php"
+[GIN] 2024/05/13 - 09:41:24 | 404 |         153ns |   112.74.54.199 | GET      "/phpMyAdmin-2.11.3/scripts/setup.php"
+[GIN] 2024/05/13 - 09:41:24 | 404 |         191ns |   112.74.54.199 | GET      "/phpMyAdmin-2.10.0.2/scripts/setup.php"
+[GIN] 2024/05/13 - 09:41:24 | 404 |          90ns |   112.74.54.199 | GET      "/phpMyAdmin-2.10.3/scripts/setup.php"
+[GIN] 2024/05/13 - 09:41:25 | 404 |          84ns |   112.74.54.199 | GET      "/phpMyAdmin-2.8.0.2/scripts/setup.php"
+[GIN] 2024/05/13 - 09:41:25 | 404 |          86ns |   112.74.54.199 | GET      "/phpMyAdmin-2.10.2/scripts/setup.php"
+[GIN] 2024/05/13 - 09:41:25 | 404 |          85ns |   112.74.54.199 | GET      "/phpMyAdmin-2.11.9.2/scripts/setup.php"
+[GIN] 2024/05/13 - 09:41:25 | 404 |          73ns |   112.74.54.199 | GET      "/phpMyAdmin-2.11.0/scripts/setup.php"
+[GIN] 2024/05/13 - 09:41:25 | 404 |          93ns |   112.74.54.199 | GET      "/phpMyAdmin-2.11.7/scripts/setup.php"
+[GIN] 2024/05/13 - 09:41:25 | 404 |         104ns |   112.74.54.199 | GET      "/phpMyAdmin-2.11.1.2/scripts/setup.php"
+[GIN] 2024/05/13 - 09:41:25 | 404 |          77ns |   112.74.54.199 | GET      "/pma/scripts/setup.php"
+[GIN] 2024/05/13 - 09:41:26 | 404 |          90ns |   112.74.54.199 | GET      "/phpMyAdmin3/scripts/setup.php"
+[GIN] 2024/05/13 - 09:41:26 | 404 |         109ns |   112.74.54.199 | GET      "/myadmin/scripts/setup.php"
+[GIN] 2024/05/13 - 09:41:26 | 404 |         131ns |   112.74.54.199 | GET      "/MyAdmin/scripts/setup.php"
+[GIN] 2024/05/13 - 09:41:26 | 404 |         121ns |   112.74.54.199 | GET      "/PHPMYADMIN/scripts/setup.php"
+[GIN] 2024/05/13 - 09:41:26 | 404 |          86ns |   112.74.54.199 | GET      "/mysqladmin/scripts/setup.php"
+[GIN] 2024/05/13 - 09:41:26 | 404 |          88ns |   112.74.54.199 | GET      "/SQL/scripts/setup.php"
+[GIN] 2024/05/13 - 09:41:26 | 404 |         134ns |   112.74.54.199 | GET      "/phpMyAdmin-2.5.5-pl1/scripts/setup.php"
+[GIN] 2024/05/13 - 09:41:27 | 404 |          73ns |   112.74.54.199 | GET      "/phpMyAdmin-2.5.5/scripts/setup.php"
+[GIN] 2024/05/13 - 09:41:27 | 404 |          79ns |   112.74.54.199 | GET      "/phpMyAdmin-2.5.4/scripts/setup.php"
+[GIN] 2024/05/13 - 09:41:27 | 404 |         112ns |   112.74.54.199 | GET      "/phpMyAdmin-2.5.7-pl1/scripts/setup.php"
+[GIN] 2024/05/13 - 09:41:27 | 404 |         291ns |   112.74.54.199 | GET      "/admin/pma/scripts/setup.php"
+[GIN] 2024/05/13 - 09:41:27 | 404 |         207ns |   112.74.54.199 | GET      "/phpMyAdmin-2/scripts/setup.php"
+[GIN] 2024/05/13 - 09:41:27 | 404 |          81ns |   112.74.54.199 | GET      "/web/phpMyAdmin/scripts/setup.php"
+[GIN] 2024/05/13 - 09:41:31 | 404 |         179ns |   112.74.54.199 | GET      "/webadmin/scripts/setup.php"
+[GIN] 2024/05/13 - 09:41:31 | 404 |         122ns |   112.74.54.199 | GET      "/admin/scripts/setup.php"
+[GIN] 2024/05/13 - 09:41:31 | 404 |         196ns |   112.74.54.199 | GET      "/dbadmin/scripts/setup.php"
+[GIN] 2024/05/13 - 09:41:31 | 404 |         126ns |   112.74.54.199 | GET      "/mysql/scripts/setup.php"
+[GIN] 2024/05/13 - 09:41:31 | 404 |          76ns |   112.74.54.199 | GET      "/phpMyAdmin2/scripts/setup.php"
+[GIN] 2024/05/13 - 09:41:31 | 404 |          88ns |   112.74.54.199 | GET      "/phpma/scripts/setup.php"
+[GIN] 2024/05/13 - 09:41:31 | 404 |         111ns |   112.74.54.199 | GET      "/sqlweb/scripts/setup.php"
+[GIN] 2024/05/13 - 09:41:38 | 404 |         171ns |   112.74.54.199 | GET      "/websql/scripts/setup.php"
+[GIN] 2024/05/13 - 09:41:38 | 404 |          90ns |   112.74.54.199 | GET      "/_phpMyAdmin/scripts/setup.php"
+[GIN] 2024/05/13 - 09:41:38 | 404 |         104ns |   112.74.54.199 | GET      "/php/scripts/setup.php"
+[GIN] 2024/05/13 - 09:41:38 | 404 |          95ns |   112.74.54.199 | GET      "/admin/phpmyadmin/scripts/setup.txt"
+[GIN] 2024/05/13 - 09:41:39 | 404 |          86ns |   112.74.54.199 | GET      "/db/scripts/setup.php"
+[GIN] 2024/05/13 - 09:41:39 | 404 |         195ns |   112.74.54.199 | GET      "/sqlmanager/scripts/setup.php"
+[GIN] 2024/05/13 - 09:41:39 | 404 |         176ns |   112.74.54.199 | GET      "/mysqlmanager/scripts/setup.php"
+[GIN] 2024/05/13 - 09:41:39 | 404 |         183ns |   112.74.54.199 | GET      "/phpmanager/scripts/setup.php"
+[GIN] 2024/05/13 - 09:41:39 | 404 |          73ns |   112.74.54.199 | GET      "/php-myadmin/scripts/setup.php"
+[GIN] 2024/05/13 - 09:41:39 | 404 |         329ns |   112.74.54.199 | GET      "/phpmy-admin/scripts/setup.php"
+[GIN] 2024/05/13 - 09:41:39 | 404 |          95ns |   112.74.54.199 | GET      "/mysql-admin/scripts/setup.php"
+
+2024/05/13 09:45:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.378ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 09:45:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.966ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 09:45:01 | 200 |  351.100206ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 09:54:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.334ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 09:54:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.563ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 09:54:02 | 200 |  554.458098ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 10:00:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.340ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 10:00:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.830ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 10:00:01 | 200 |    763.1156ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 10:09:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.336ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 10:09:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.491ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 10:09:02 | 200 |  629.009328ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 10:18:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.337ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 10:18:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.647ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 10:18:01 | 200 |  410.532266ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 10:27:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.311ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 10:27:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.819ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 10:27:02 | 200 |   694.37748ms |    52.193.51.52 | GET      "/api/auto_login"
+[GIN] 2024/05/13 - 10:35:13 | 200 |  154.387839ms |       127.0.0.1 | POST     "/api/v1/getList"
+
+2024/05/13 10:36:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.332ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 10:36:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.962ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 10:36:01 | 200 |  169.181718ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 10:45:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.329ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 10:45:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.928ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 10:45:02 | 200 |  168.507188ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 10:54:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.335ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 10:54:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[4.002ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 10:54:01 | 200 |  328.529583ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 11:00:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.341ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 11:00:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[4.094ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 11:00:01 | 200 |  180.638309ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 11:09:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.333ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 11:09:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[4.021ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 11:09:01 | 200 |  326.719278ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 11:18:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.341ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 11:18:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.198ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 11:18:02 | 200 |  169.939451ms |    52.193.51.52 | GET      "/api/auto_login"
+[GIN] 2024/05/13 - 11:26:17 | 200 |     133.919µs |    218.86.94.27 | GET      "/api/outFly?token=f3785tg3b48f237fg8243yt5"
+[GIN] 2024/05/13 - 11:26:28 | 200 |       33.76µs |    218.86.94.27 | GET      "/api/outFly?token=f3785tg3b48f237fg8243yt5"
+[GIN] 2024/05/13 - 11:26:39 | 200 |      28.747µs |    218.86.94.27 | GET      "/api/outFly?token=f3785tg3b48f237fg8243yt5"
+
+2024/05/13 11:27:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.316ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 11:27:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[4.242ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 11:27:01 | 200 |  325.204723ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 11:36:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.320ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 11:36:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[4.176ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 11:36:01 | 200 |  182.926602ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 11:45:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.332ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 11:45:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.933ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 11:45:02 | 200 |  317.267238ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 11:54:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.318ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 11:54:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[4.114ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 11:54:01 | 200 |  317.569219ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 12:00:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.338ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 12:00:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.773ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 12:00:01 | 200 |  159.353271ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 12:09:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.331ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 12:09:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.198ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 12:09:01 | 200 |  273.367464ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 12:18:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.361ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 12:18:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.862ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 12:18:02 | 200 |  736.005501ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 12:27:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.328ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 12:27:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.977ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 12:27:02 | 200 |  1.045736227s |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 12:36:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.343ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 12:36:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[4.201ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 12:36:02 | 200 |  501.569592ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 12:45:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.335ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 12:45:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[4.050ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 12:45:01 | 200 |  163.752636ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 12:54:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.334ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 12:54:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.395ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 12:54:01 | 200 |  369.892642ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 13:00:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.376ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 13:00:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.399ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 13:00:02 | 200 |  463.403811ms |    52.193.51.52 | GET      "/api/auto_login"
+[GIN] 2024/05/13 - 13:07:07 | 404 |         107ns | 167.248.133.183 | GET      "/"
+[GIN] 2024/05/13 - 13:07:11 | 404 |         206ns | 167.248.133.183 | GET      "/"
+[GIN] 2024/05/13 - 13:07:11 | 404 |         172ns | 167.248.133.183 | PRI      "*"
+
+2024/05/13 13:09:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.655ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 13:09:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[4.411ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 13:09:01 | 200 |  431.035074ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 13:18:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.333ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 13:18:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.732ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 13:18:02 | 200 |  384.485771ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 13:27:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.327ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 13:27:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[4.001ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 13:27:01 | 200 |  361.230951ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 13:36:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.341ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 13:36:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.810ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 13:36:01 | 200 |   169.00894ms |    52.193.51.52 | GET      "/api/auto_login"
+[GIN] 2024/05/13 - 13:42:12 | 404 |         130ns | 167.248.133.179 | GET      "/"
+[GIN] 2024/05/13 - 13:42:15 | 404 |         249ns | 167.248.133.179 | GET      "/"
+[GIN] 2024/05/13 - 13:42:15 | 404 |          84ns | 167.248.133.179 | PRI      "*"
+
+2024/05/13 13:45:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.333ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 13:45:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.953ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 13:45:02 | 200 |  315.906613ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 13:54:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.315ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 13:54:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.855ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 13:54:01 | 200 |  237.927388ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 14:00:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.332ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 14:00:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[4.892ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 14:00:02 | 200 |  576.782001ms |    52.193.51.52 | GET      "/api/auto_login"
+[GIN] 2024/05/13 - 14:00:15 | 404 |         451ns |  87.236.176.180 | GET      "/"
+
+2024/05/13 14:09:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.641ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 14:09:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[4.041ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 14:09:01 | 200 |  862.141063ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 14:18:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.330ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 14:18:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.992ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = 'e11e5f3201701d67cad605728584d9c80c99b405'
+[GIN] 2024/05/13 - 14:18:02 | 200 |  172.598767ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 14:27:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.337ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 14:27:18 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:285
+[0m[33m[3.899ms] [34;1m[rows:1][0m UPDATE `platform` SET `offline_reason`='Get "https://6203715498-hy.tcr195uhyru.com/web/rest/generatecaptcha": dial tcp 154.197.46.111:443: connect: no route to host',`online`=0 WHERE id = 1
+[feidan-api]2024/05/13 - 14:27:18.601	[31merror[0m	D:/work/GoLandProject/feidan-api/service/account/account.go:257	平台:https://6203715498-hy.tcr195uhyru.com 账号:666m2 密码:111222Tc. 自动登陆失败	{"error": "Get \"https://6203715498-hy.tcr195uhyru.com/web/rest/generatecaptcha\": dial tcp 154.197.46.111:443: connect: no route to host"}
+[GIN] 2024/05/13 - 14:27:18 | 200 | 17.348683122s |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 14:36:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.326ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 14:36:03 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:296
+[0m[33m[2.864ms] [34;1m[rows:1][0m UPDATE `platform` SET `offline_reason`='',`online`=1,`token`='1cdd09b644007d7a32a3f5f33998b6b1de62b26d' WHERE id = 1
+
+2024/05/13 14:36:03 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[2.672ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 14:36:03 | 200 |  1.685501361s |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 14:45:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.331ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 14:45:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.898ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 14:45:01 | 200 |  603.727837ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 14:54:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.333ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 14:54:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.288ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 14:54:02 | 200 |  396.327193ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 15:00:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.333ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 15:00:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.883ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 15:00:01 | 200 |  377.921414ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 15:09:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.344ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 15:09:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.491ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 15:09:02 | 200 |   367.89264ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 15:18:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.337ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 15:18:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[4.064ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 15:18:01 | 200 |  369.223509ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 15:27:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.328ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 15:27:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.610ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 15:27:02 | 200 |  396.801569ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 15:36:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.347ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 15:36:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[2.282ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 15:36:01 | 200 |  382.548022ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 15:45:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.314ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 15:45:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.676ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 15:45:01 | 200 |  346.469654ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 15:54:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.330ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 15:54:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.874ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 15:54:02 | 200 |  381.776878ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 16:00:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.323ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 16:00:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[4.153ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 16:00:01 | 200 |  358.163962ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 16:09:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.342ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 16:09:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.972ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 16:09:02 | 200 |  340.031302ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 16:18:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.341ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 16:18:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.809ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 16:18:01 | 200 |  350.083028ms |    52.193.51.52 | GET      "/api/auto_login"
+[GIN] 2024/05/13 - 16:26:00 | 404 |         101ns |   199.45.155.37 | GET      "/"
+[GIN] 2024/05/13 - 16:26:03 | 404 |         177ns |   199.45.155.37 | GET      "/"
+[GIN] 2024/05/13 - 16:26:04 | 404 |          88ns |   199.45.155.37 | PRI      "*"
+
+2024/05/13 16:27:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[1.226ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 16:27:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[4.103ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 16:27:01 | 200 |   376.44087ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 16:36:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.340ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 16:36:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[2.423ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 16:36:02 | 200 |  330.649122ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 16:45:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.329ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 16:45:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[4.065ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 16:45:01 | 200 |  317.771913ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 16:54:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.328ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 16:54:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[4.311ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 16:54:01 | 200 |  358.412114ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 17:00:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.339ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 17:00:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.548ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 17:00:02 | 200 |  380.528095ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 17:09:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.337ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 17:09:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[4.321ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 17:09:01 | 200 |  320.258887ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 17:18:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.326ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 17:18:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[4.116ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 17:18:02 | 200 |   261.33095ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 17:27:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.327ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 17:27:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[4.084ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 17:27:01 | 200 |  382.431985ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 17:36:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.337ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 17:36:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.855ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 17:36:01 | 200 |  332.466466ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 17:45:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.338ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 17:45:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[4.112ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 17:45:02 | 200 |  323.565478ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 17:54:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.330ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 17:54:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[4.189ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 17:54:01 | 200 |  323.695591ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 18:00:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.337ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 18:00:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.907ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 18:00:01 | 200 |  335.476166ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 18:09:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.321ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 18:09:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[4.169ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 18:09:02 | 200 |  370.804434ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 18:18:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.325ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 18:18:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.840ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 18:18:01 | 200 |  389.430566ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 18:27:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.331ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 18:27:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.577ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 18:27:02 | 200 |  316.381991ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 18:36:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.345ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 18:36:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[4.219ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 18:36:01 | 200 |  334.594945ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 18:45:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.337ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 18:45:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[4.089ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 18:45:01 | 200 |   321.36732ms |    52.193.51.52 | GET      "/api/auto_login"
+[GIN] 2024/05/13 - 18:52:29 | 200 |      34.255µs |    8.217.237.54 | GET      "/api/outFly?token=f3785tg3b48f237fg8243yt5"
+[GIN] 2024/05/13 - 18:52:37 | 200 |      30.653µs |    8.217.237.54 | GET      "/api/outFly?token=f3785tg3b48f237fg8243yt5"
+[GIN] 2024/05/13 - 18:52:42 | 200 |      39.331µs |    8.217.237.54 | POST     "/api/outFly?token=f3785tg3b48f237fg8243yt5"
+[GIN] 2024/05/13 - 18:52:45 | 200 |       45.33µs |    8.217.237.54 | POST     "/api/outFly?token=f3785tg3b48f237fg8243yt5"
+[GIN] 2024/05/13 - 18:52:51 | 200 |       42.42µs |    8.217.237.54 | POST     "/api/outFly?token=f3785tg3b48f237fg8243yt5"
+[GIN] 2024/05/13 - 18:52:58 | 200 |      33.234µs |    8.217.237.54 | POST     "/api/outFly?token=f3785tg3b48f237fg8243yt5"
+
+2024/05/13 18:54:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.330ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 18:54:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.814ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 18:54:02 | 200 |  397.752785ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 19:00:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.486ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 19:00:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.908ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 19:00:01 | 200 |  333.920553ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 19:09:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.472ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 19:09:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.894ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 19:09:01 | 200 |  341.226156ms |    52.193.51.52 | GET      "/api/auto_login"
+[GIN] 2024/05/13 - 19:11:46 | 200 |     133.505µs |    8.217.237.54 | POST     "/api/outFly?token=f3785tg3b48f237fg8243yt5"
+[GIN] 2024/05/13 - 19:13:05 | 200 |      94.641µs |    8.217.237.54 | POST     "/api/outFly?token=f3785tg3b48f237fg8243yt5"
+[GIN] 2024/05/13 - 19:16:08 | 200 |      57.971µs |    8.217.237.54 | POST     "/api/outFly?token=f3785tg3b48f237fg8243yt5"
+[GIN] 2024/05/13 - 19:17:12 | 200 |      60.561µs |    8.217.237.54 | POST     "/api/outFly?token=f3785tg3b48f237fg8243yt5"
+
+2024/05/13 19:18:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.329ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 19:18:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.953ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 19:18:02 | 200 |  240.402019ms |    52.193.51.52 | GET      "/api/auto_login"
+[GIN] 2024/05/13 - 19:18:26 | 200 |      50.302µs |    8.217.237.54 | POST     "/api/outFly?token=f3785tg3b48f237fg8243yt5"
+[GIN] 2024/05/13 - 19:18:52 | 200 |      60.092µs |    8.217.237.54 | POST     "/api/outFly?token=f3785tg3b48f237fg8243yt5"
+[GIN] 2024/05/13 - 19:19:35 | 200 |     111.244µs |    8.217.237.54 | POST     "/api/outFly?token=f3785tg3b48f237fg8243yt5"
+
+2024/05/13 19:19:57 [32mD:/work/GoLandProject/feidan-api/service/bet/bet.go:63
+[0m[33m[0.351ms] [34;1m[rows:0][0m SELECT `id` FROM `admin_user` WHERE username = ('ce001')
+
+2024/05/13 19:19:57 [32mD:/work/GoLandProject/feidan-api/service/bet/bet.go:68
+[0m[33m[0.255ms] [34;1m[rows:0][0m SELECT * FROM `platform` WHERE admin_user_id in (NULL)
+[GIN] 2024/05/13 - 19:19:57 | 200 |     949.709µs |    8.217.237.54 | POST     "/api/outFly?token=f3785tg3b48f237fg8243yt5"
+[GIN] 2024/05/13 - 19:20:47 | 200 |      61.698µs |    8.217.237.54 | POST     "/api/outFly?token=f3785tg3b48f237fg8243yt5"
+
+2024/05/13 19:27:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.321ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 19:27:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.958ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 19:27:01 | 200 |  326.084544ms |    52.193.51.52 | GET      "/api/auto_login"
+[GIN] 2024/05/13 - 19:27:03 | 200 |      56.229µs |    8.217.237.54 | POST     "/api/outFly?token=f3785tg3b48f237fg8243yt5"
+
+2024/05/13 19:36:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.323ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 19:36:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[4.080ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 19:36:01 | 200 |  378.832446ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 19:45:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.321ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 19:45:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[4.008ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 19:45:01 | 200 |  337.246883ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 19:54:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.359ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 19:54:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.868ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 19:54:01 | 200 |  327.272138ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 20:00:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.334ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 20:00:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.779ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 20:00:02 | 200 |  366.209183ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 20:09:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.331ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 20:09:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.570ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 20:09:01 | 200 |  320.448125ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 20:18:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.333ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 20:18:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.730ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 20:18:02 | 200 |  484.200397ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 20:27:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.350ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 20:27:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.590ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 20:27:01 | 200 |  430.831847ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 20:36:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.335ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 20:36:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.819ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 20:36:01 | 200 |  410.245248ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 20:45:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.332ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 20:45:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.902ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 20:45:02 | 200 |  333.862332ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 20:54:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.334ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 20:54:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.758ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 20:54:01 | 200 |  327.371417ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 21:00:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.337ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 21:00:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[4.064ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 21:00:01 | 200 |  317.852571ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 21:09:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.334ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 21:09:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.919ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 21:09:02 | 200 |  373.843081ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 21:18:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.333ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 21:18:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[4.255ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 21:18:01 | 200 |  462.313106ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 21:27:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.328ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 21:27:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.899ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 21:27:02 | 200 |  339.830776ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 21:36:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.334ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 21:36:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[4.026ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 21:36:01 | 200 |  592.105919ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 21:45:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.342ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 21:45:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[4.006ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 21:45:02 | 200 |   329.26203ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 21:54:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.334ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 21:54:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[4.265ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 21:54:01 | 200 |  325.400351ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 22:00:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.385ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 22:00:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.894ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 22:00:02 | 200 |  435.356033ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 22:09:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.327ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 22:09:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.768ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.23',`betting`='0.00',`result`='-2.97' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 22:09:01 | 200 |  332.943478ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 22:18:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.336ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 22:18:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[4.204ms] [34;1m[rows:1][0m UPDATE `platform` SET `balance`='82.2',`betting`='0.00',`result`='0.00' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 22:18:01 | 200 |  374.264384ms |    52.193.51.52 | GET      "/api/auto_login"
+[GIN] 2024/05/13 - 22:24:52 | 404 |          95ns |    80.82.70.133 | GET      "/"
+
+2024/05/13 22:27:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.315ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 22:27:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.923ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.2',`betting`='0.00',`result`='0.00' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 22:27:02 | 200 |  322.905994ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 22:36:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.331ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 22:36:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[4.095ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.2',`betting`='0.00',`result`='0.00' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 22:36:02 | 200 |   831.80403ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 22:45:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.346ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 22:45:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.503ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.2',`betting`='0.00',`result`='0.00' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 22:45:01 | 200 |  336.006239ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 22:54:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.342ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 22:54:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.833ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.2',`betting`='0.00',`result`='0.00' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 22:54:01 | 200 |  332.260455ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 23:00:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.319ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 23:00:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[4.022ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.2',`betting`='0.00',`result`='0.00' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 23:00:02 | 200 |  321.011682ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 23:09:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.334ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 23:09:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[4.206ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.2',`betting`='0.00',`result`='0.00' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 23:09:01 | 200 |  341.039066ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 23:18:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.321ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 23:18:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.916ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.2',`betting`='0.00',`result`='0.00' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 23:18:02 | 200 |  599.358095ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 23:27:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.326ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 23:27:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.529ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.2',`betting`='0.00',`result`='0.00' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 23:27:01 | 200 |  332.389991ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 23:36:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.327ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 23:36:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.992ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.2',`betting`='0.00',`result`='0.00' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 23:36:01 | 200 |  389.356161ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 23:45:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.330ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 23:45:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[4.091ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.2',`betting`='0.00',`result`='0.00' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 23:45:02 | 200 |  348.001868ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/13 23:54:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.336ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/13 23:54:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[4.099ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.2',`betting`='0.00',`result`='0.00' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/13 - 23:54:01 | 200 |   604.44575ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/14 00:00:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.327ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/14 00:00:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[4.020ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.2',`betting`='0.00',`result`='0.00' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/14 - 00:00:02 | 200 |  378.331765ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/14 00:09:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.326ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/14 00:09:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[2.815ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.2',`betting`='0.00',`result`='0.00' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/14 - 00:09:01 | 200 |  382.031426ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/14 00:18:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.426ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/14 00:18:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.648ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.2',`betting`='0.00',`result`='0.00' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/14 - 00:18:02 | 200 |  320.511825ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/14 00:27:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.331ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/14 00:27:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[4.053ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.2',`betting`='0.00',`result`='0.00' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/14 - 00:27:01 | 200 |  322.409237ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/14 00:36:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.342ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/14 00:36:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[4.023ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.2',`betting`='0.00',`result`='0.00' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/14 - 00:36:01 | 200 |   337.42643ms |    52.193.51.52 | GET      "/api/auto_login"
+[GIN] 2024/05/14 - 00:37:02 | 404 |         101ns |   146.190.63.22 | GET      "/?v=1&ip=52.193.51.52&port=8000"
+
+2024/05/14 00:45:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.319ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/14 00:45:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.375ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.2',`betting`='0.00',`result`='0.00' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/14 - 00:45:02 | 200 |  397.679598ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/14 00:54:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.337ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/14 00:54:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.978ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.2',`betting`='0.00',`result`='0.00' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/14 - 00:54:01 | 200 |  371.956014ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/14 01:00:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.351ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/14 01:00:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.876ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.2',`betting`='0.00',`result`='0.00' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/14 - 01:00:02 | 200 |  651.574213ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/14 01:09:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.334ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/14 01:09:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.916ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.2',`betting`='0.00',`result`='0.00' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/14 - 01:09:01 | 200 |  397.925102ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/14 01:18:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.333ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/14 01:18:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[4.273ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.2',`betting`='0.00',`result`='0.00' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/14 - 01:18:01 | 200 |   387.51436ms |    52.193.51.52 | GET      "/api/auto_login"
+[GIN] 2024/05/14 - 01:18:09 | 404 |         170ns |  143.198.106.10 | GET      "/?v=1&ip=52.193.51.52&port=8000"
+
+2024/05/14 01:27:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.337ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/14 01:27:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[4.023ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.2',`betting`='0.00',`result`='0.00' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/14 - 01:27:02 | 200 |  374.270507ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/14 01:36:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.347ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/14 01:36:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[4.122ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.2',`betting`='0.00',`result`='0.00' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/14 - 01:36:01 | 200 |  327.674985ms |    52.193.51.52 | GET      "/api/auto_login"
+[GIN] 2024/05/14 - 01:38:20 | 404 |         116ns |  198.235.24.213 | GET      "/"
+
+2024/05/14 01:45:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.327ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/14 01:45:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.869ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.2',`betting`='0.00',`result`='0.00' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/14 - 01:45:01 | 200 |  331.166444ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/14 01:54:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.337ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/14 01:54:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.835ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.2',`betting`='0.00',`result`='0.00' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/14 - 01:54:02 | 200 |  380.939513ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/14 02:00:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.354ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/14 02:00:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.835ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.2',`betting`='0.00',`result`='0.00' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/14 - 02:00:01 | 200 |  382.229448ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/14 02:09:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.346ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/14 02:09:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.420ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.2',`betting`='0.00',`result`='0.00' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/14 - 02:09:01 | 200 |  343.257507ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/14 02:18:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.320ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/14 02:18:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.778ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.2',`betting`='0.00',`result`='0.00' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/14 - 02:18:02 | 200 |  370.721716ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/14 02:27:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.345ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/14 02:27:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.776ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.2',`betting`='0.00',`result`='0.00' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/14 - 02:27:01 | 200 |  376.878709ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/14 02:36:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.327ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/14 02:36:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.910ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.2',`betting`='0.00',`result`='0.00' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/14 - 02:36:02 | 200 |  657.184541ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/14 02:45:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.349ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/14 02:45:01 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[2.963ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.2',`betting`='0.00',`result`='0.00' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/14 - 02:45:01 | 200 |  427.977652ms |    52.193.51.52 | GET      "/api/auto_login"
+
+2024/05/14 02:46:49 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.346ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/14 02:46:49 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[3.978ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.2',`betting`='0.00',`result`='0.00' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/14 - 02:46:49 | 200 |   329.34926ms |   14.118.134.34 | GET      "/api/auto_login"
+
+2024/05/14 02:54:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:241
+[0m[33m[0.344ms] [34;1m[rows:1][0m SELECT * FROM `platform`
+
+2024/05/14 02:54:02 [32mD:/work/GoLandProject/feidan-api/service/account/account.go:330
+[0m[33m[2.727ms] [34;1m[rows:0][0m UPDATE `platform` SET `balance`='82.2',`betting`='0.00',`result`='0.00' WHERE id = 1 or token = '1cdd09b644007d7a32a3f5f33998b6b1de62b26d'
+[GIN] 2024/05/14 - 02:54:02 | 200 |  332.302667ms |    52.193.51.52 | GET      "/api/auto_login"

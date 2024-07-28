@@ -1,0 +1,15 @@
+[feidan-api]2024/05/12 - 10:48:02.481	[31merror[0m	D:/work/GoLandProject/feidan-api/service/account/account.go:256	平台:https://6203715498-hy.tcr195uhyru.com 账号:666m2 密码:111222Tc 自动登陆失败	{"error": "15秒内只能登录一次，请稍后再试。"}
+[feidan-api]2024/05/12 - 11:03:35.411	[31merror[0m	D:/work/GoLandProject/feidan-api/service/account/account.go:256	平台:https://6203715498-hy.tcr195uhyru.com 账号:666m2 密码:111222Tc 自动登陆失败	{"error": "15秒内只能登录一次，请稍后再试。"}
+[feidan-api]2024/05/12 - 11:04:33.421	[31merror[0m	D:/work/GoLandProject/feidan-api/service/account/account.go:256	平台:https://6203715498-hy.tcr195uhyru.com 账号:666m2 密码:111222Tc 自动登陆失败	{"error": "验证码有误，请检查！"}
+[feidan-api]2024/05/12 - 16:50:45.555	[31merror[0m	D:/work/GoLandProject/feidan-api/service/bet/bet.go:78	账号:999k5,刷新用户余额失败
+[feidan-api]2024/05/12 - 16:50:45.631	[31merror[0m	D:/work/GoLandProject/feidan-api/service/bet/bet.go:78	账号:666m2,刷新用户余额失败
+[feidan-api]2024/05/12 - 16:51:33.039	[31merror[0m	D:/work/GoLandProject/feidan-api/service/bet/bet.go:78	账号:999k5,刷新用户余额失败
+[feidan-api]2024/05/12 - 16:51:35.700	[31merror[0m	D:/work/GoLandProject/feidan-api/service/bet/bet.go:78	账号:666m2,刷新用户余额失败
+[feidan-api]2024/05/12 - 18:09:19.389	[31merror[0m	D:/work/GoLandProject/feidan-api/service/bet/bet.go:83	账号:999k5,刷新用户余额失败
+[feidan-api]2024/05/12 - 18:09:19.460	[31merror[0m	D:/work/GoLandProject/feidan-api/service/bet/bet.go:83	账号:666m2,刷新用户余额失败
+[feidan-api]2024/05/12 - 18:09:49.045	[31merror[0m	D:/work/GoLandProject/feidan-api/service/bet/bet.go:83	账号:999k5,刷新用户余额失败
+[feidan-api]2024/05/12 - 18:09:49.125	[31merror[0m	D:/work/GoLandProject/feidan-api/service/bet/bet.go:83	账号:666m2,刷新用户余额失败
+[feidan-api]2024/05/12 - 18:10:04.270	[31merror[0m	D:/work/GoLandProject/feidan-api/service/bet/bet.go:83	账号:999k5,刷新用户余额失败
+[feidan-api]2024/05/12 - 18:10:04.358	[31merror[0m	D:/work/GoLandProject/feidan-api/service/bet/bet.go:83	账号:666m2,刷新用户余额失败
+[feidan-api]2024/05/12 - 19:06:07.535	[31merror[0m	D:/work/GoLandProject/feidan-api/service/bet/bet.go:94	账号:666m2,刷新用户余额失败
+[feidan-api]2024/05/12 - 19:06:07.794	[31merror[0m	D:/work/GoLandProject/feidan-api/service/bet/bet.go:94	账号:999k5,刷新用户余额失败

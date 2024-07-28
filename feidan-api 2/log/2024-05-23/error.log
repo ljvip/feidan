@@ -1,0 +1,2 @@
+[feidan-api]2024/05/23 - 02:11:25.126	[31merror[0m	D:/work/GoLandProject/feidan-api/service/bet/bet.go:99	账号:666m11,刷新用户余额失败
+[feidan-api]2024/05/23 - 09:14:02.683	[31merror[0m	D:/work/GoLandProject/feidan-api/service/account/account.go:257	平台:https://6203715498-hy.tcr195uhyru.com 账号:666m9 密码:111222Tc. 自动登陆失败	{"error": "验证码有误，请检查！"}

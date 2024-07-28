@@ -1,0 +1,6 @@
+[feidan-api]2024/05/13 - 04:26:42.631	[31merror[0m	D:/work/GoLandProject/feidan-api/core/server.go:23	accept tcp [::]:9000: use of closed network connection
+[feidan-api]2024/05/13 - 04:56:55.689	[31merror[0m	D:/work/GoLandProject/feidan-api/core/server.go:23	accept tcp [::]:8000: use of closed network connection
+[feidan-api]2024/05/13 - 04:59:23.570	[31merror[0m	D:/work/GoLandProject/feidan-api/core/server.go:23	accept tcp [::]:8000: use of closed network connection
+[feidan-api]2024/05/13 - 04:59:36.613	[31merror[0m	D:/work/GoLandProject/feidan-api/core/server.go:23	accept tcp [::]:8000: use of closed network connection
+[feidan-api]2024/05/13 - 07:11:36.909	[31merror[0m	D:/work/GoLandProject/feidan-api/core/server.go:23	accept tcp [::]:8000: use of closed network connection
+[feidan-api]2024/05/13 - 14:27:18.601	[31merror[0m	D:/work/GoLandProject/feidan-api/service/account/account.go:257	平台:https://6203715498-hy.tcr195uhyru.com 账号:666m2 密码:111222Tc. 自动登陆失败	{"error": "Get \"https://6203715498-hy.tcr195uhyru.com/web/rest/generatecaptcha\": dial tcp 154.197.46.111:443: connect: no route to host"}

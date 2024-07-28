@@ -1,0 +1,13 @@
+[feidan-api]2024/05/23 - 02:11:10.377	[34minfo[0m	D:/work/GoLandProject/feidan-api/initialize/router.go:51	register swagger handler
+[feidan-api]2024/05/23 - 02:11:10.408	[34minfo[0m	D:/work/GoLandProject/feidan-api/initialize/router.go:60	router register success
+[feidan-api]2024/05/23 - 02:11:10.410	[34minfo[0m	D:/work/GoLandProject/feidan-api/core/server.go:21	server run success on 	{"address": ":9000"}
+[feidan-api]2024/05/23 - 09:19:56.310	[34minfo[0m	D:/work/GoLandProject/feidan-api/initialize/router.go:51	register swagger handler
+[feidan-api]2024/05/23 - 09:19:56.330	[34minfo[0m	D:/work/GoLandProject/feidan-api/initialize/router.go:60	router register success
+[feidan-api]2024/05/23 - 09:19:56.332	[34minfo[0m	D:/work/GoLandProject/feidan-api/core/server.go:21	server run success on 	{"address": ":9000"}
+[feidan-api]2024/05/23 - 09:27:20.796	[34minfo[0m	D:/work/GoLandProject/feidan-api/initialize/router.go:51	register swagger handler
+[feidan-api]2024/05/23 - 09:27:20.817	[34minfo[0m	D:/work/GoLandProject/feidan-api/initialize/router.go:60	router register success
+[feidan-api]2024/05/23 - 09:27:20.818	[34minfo[0m	D:/work/GoLandProject/feidan-api/core/server.go:21	server run success on 	{"address": ":9000"}
+[feidan-api]2024/05/23 - 14:32:57.979	[34minfo[0m	D:/work/GoLandProject/feidan-api/initialize/router.go:51	register swagger handler
+[feidan-api]2024/05/23 - 14:32:57.999	[34minfo[0m	D:/work/GoLandProject/feidan-api/initialize/router.go:60	router register success
+[feidan-api]2024/05/23 - 14:32:58.000	[34minfo[0m	D:/work/GoLandProject/feidan-api/core/server.go:21	server run success on 	{"address": ":9000"}
+[feidan-api]2024/05/23 - 14:33:07.847	[34minfo[0m	D:/work/GoLandProject/feidan-api/api/v1/bet/bet.go:33	飞单参数:	{"param": {"rows":2,"ce":"666k5","data":[{"code":"168_xysc","issue":"20240523047","list":[{"pum":1000000,"amount":5,"log":""},{"pum":1000000,"amount":5,"log":""}]}],"token":""}}

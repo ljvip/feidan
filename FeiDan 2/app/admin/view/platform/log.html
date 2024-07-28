@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>管理后台-对接账户</title>
+  <link rel="stylesheet" href="/static/component/element-plus/element-plus.css"/>
+  <link rel="stylesheet" href="/static/component/common/common.css"/>
+  <link rel="stylesheet" href="/static/view/admin/layout/layout.css"/>
+  <script src="/static/view/admin/layout/layout.js"></script>
+  <script src="/static/component/vue/vue.js"></script>
+  <script src="/static/component/element-plus/element-plus.js"></script>
+  <script src="/static/component/element-plus/element-plus-icon.js"></script>
+  <script src="/static/component/axios/axios.js"></script>
+  <script src="/static/component/common/common.js"></script>
+  <style>
+      :root {
+          --content-bg-color: #ffffff;
+          --content-padding: 20px;
+          --content-shadow: 0 0 #0000, 0 0 #0000, 0 2px 3px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+          --content-border-radius: 5px;
+      }
+
+      .container {
+          display: flex;
+      }
+
+      .container__content {
+          width: 100%;
+          max-width: 1200px;
+          margin: 0 auto;
+          background: var(--content-bg-color);
+          padding: var(--content-padding);
+          box-shadow: var(--content-shadow);
+          border-radius: var(--content-border-radius);
+      }
+  </style>
+</head>
+<body>
+<div id="app">
+  <div class="container">
+    {include file="/layout/menus"}
+    <div class="container__content">
+      
+        {if session('admin_user')['id'] == 1}
+        <div style="display:flex;">
+            <el-form-item label="开始ID">
+                <el-input v-model="delStartId"
+                    type="number"
+                    placeholder="删除开始ID"></el-input>
+            </el-form-item>
+            <el-form-item label="结束ID" style="margin-left: 10px;">
+                <el-input v-model="delEndId"
+                    type="number"
+                    placeholder="删除结束ID"></el-input>
+            </el-form-item>
+            <el-form-item style="margin-left: 10px;">
+                <el-button type="danger" :loading="delLoading" @click="del">删除</el-button>
+            </el-form-item>
+        </div>
+        {/if}
+      
+      <el-table :data="tableData" v-loading="tableLoading" empty-text="暂无数据~" stripe highlight-current-row>
+        <el-table-column fixed="left" prop="id" label="ID" min-width="60"></el-table-column>
+        <el-table-column prop="url" label="飞单地址" min-width="100">
+          <template #default="scope">
+            <el-popover
+                placement="bottom-start"
+                title="飞单地址"
+                width="550px"
+                trigger="hover"
+                :content="scope.row.url">
+              <template #reference>
+                <el-text disable-transitions truncated>
+                  {{ scope.row.url }}
+                </el-text>
+              </template>
+            </el-popover>
+          </template>
+        </el-table-column>
+        <el-table-column prop="username" label="飞单账户" min-width="100"></el-table-column>
+        <el-table-column prop="create_time" label="飞单时间" min-width="100"></el-table-column>
+        <el-table-column prop="send" label="发送数据" min-width="100">
+          <template #default="scope">
+            <el-popover
+                placement="bottom-start"
+                title="发送数据"
+                width="550px"
+                trigger="hover"
+                :content="scope.row.send">
+              <template #reference>
+                <el-text disable-transitions truncated>
+                  {{ scope.row.send }}
+                </el-text>
+              </template>
+            </el-popover>
+          </template>
+        </el-table-column>
+        <el-table-column prop="input" label="接收数据" min-width="100">
+          <template #default="scope">
+            <el-popover
+                placement="bottom-start"
+                title="接收数据"
+                width="550px"
+                trigger="hover"
+                :content="scope.row.input">
+              <template #reference>
+                <el-text disable-transitions truncated>
+                  {{ scope.row.input }}
+                </el-text>
+              </template>
+            </el-popover>
+          </template>
+        </el-table-column>
+
+      </el-table>
+
+      <!--分页-->
+      <div class="table-page">
+        <el-pagination background
+                       :hide-on-single-page="true"
+                       layout="prev, pager, next"
+                       :total="tableCount"
+                       @change="tableChange">
+        </el-pagination>
+      </div>
+
+    </div>
+  </div>
+</div>
+<script>
+    const { createApp, ref, reactive } = Vue
+    const common = new Common()
+    const { setRootStyleVar, http } = common
+
+    const app = createApp({
+        setup() {
+            const tableData = ref([])
+            const tableLoading = ref(false)
+            const tableCount = ref(0)
+            const page = ref(1)
+            const limit = ref(10)
+            const delEndId = ref('')
+            const delStartId = ref('')
+            const delLoading = ref(false)
+
+            function getTableData() {
+                tableLoading.value = true
+                http.get("/admin/platform/select_log?page=" + page.value + "&limit=" + limit.value).then(res => {
+                    if (res.code === 200) {
+                        tableCount.value = res.data.count
+                        tableData.value = res.data.data
+                        return
+                    }
+
+                    ElementPlus.ElMessage({
+                        type: "error",
+                        message: res.msg || "服务器内部错误",
+                    })
+                }).catch(err => {
+                    ElementPlus.ElMessage({
+                        type: "error",
+                        message: "服务器内部错误",
+                    })
+                }).finally(() => {
+                    setTimeout(() => tableLoading.value = false, 1000)
+                })
+            }
+
+            getTableData()
+
+            function tableChange(e) {
+                page.value = e
+                getTableData()
+            }
+            
+            function del() {
+                delLoading.value = true
+                tableLoading.value = true
+                http.post("/admin/platform/del_log", {
+                    start_id: delStartId.value,
+                    end_id: delEndId.value
+                }).then(res => {
+                    if (res.code === 200) {
+                        ElementPlus.ElMessage({
+                            type: "success",
+                            message: res.msg || "删除成功",
+                        })
+                        getTableData()
+                        return
+                    }
+
+                    ElementPlus.ElMessage({
+                        type: "error",
+                        message: res.msg || "服务器内部错误",
+                    })
+                }).catch(err => {
+                    ElementPlus.ElMessage({
+                        type: "error",
+                        message: "服务器内部错误",
+                    })
+                }).finally(() => {
+                    setTimeout(() => {
+                        tableLoading.value = false
+                        delLoading.value = false
+                    }, 1000)
+                })
+            }
+
+            return {
+                tableData,
+                tableLoading,
+                tableCount,
+                tableChange,
+                del,
+                delStartId,
+                delEndId,
+                delLoading
+            }
+        },
+    })
+
+    for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
+        app.component(key, component)
+    }
+    app.use(ElementPlus)
+    app.mount("#app")
+</script>
+</body>
+</html>

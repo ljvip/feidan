@@ -1,0 +1,18 @@
+[feidan-api]2024/05/14 - 20:52:53.891	[34minfo[0m	D:/work/GoLandProject/feidan-api/initialize/router.go:51	register swagger handler
+[feidan-api]2024/05/14 - 20:52:53.896	[34minfo[0m	D:/work/GoLandProject/feidan-api/initialize/router.go:60	router register success
+[feidan-api]2024/05/14 - 20:52:53.897	[34minfo[0m	D:/work/GoLandProject/feidan-api/core/server.go:21	server run success on 	{"address": ":8000"}
+[feidan-api]2024/05/14 - 20:53:49.352	[34minfo[0m	D:/work/GoLandProject/feidan-api/initialize/router.go:51	register swagger handler
+[feidan-api]2024/05/14 - 20:53:49.358	[34minfo[0m	D:/work/GoLandProject/feidan-api/initialize/router.go:60	router register success
+[feidan-api]2024/05/14 - 20:53:49.358	[34minfo[0m	D:/work/GoLandProject/feidan-api/core/server.go:21	server run success on 	{"address": ":9000"}
+[feidan-api]2024/05/14 - 20:55:35.488	[34minfo[0m	D:/work/GoLandProject/feidan-api/initialize/router.go:51	register swagger handler
+[feidan-api]2024/05/14 - 20:55:35.493	[34minfo[0m	D:/work/GoLandProject/feidan-api/initialize/router.go:60	router register success
+[feidan-api]2024/05/14 - 20:55:35.494	[34minfo[0m	D:/work/GoLandProject/feidan-api/core/server.go:21	server run success on 	{"address": ":9000"}
+[feidan-api]2024/05/14 - 21:03:44.763	[34minfo[0m	D:/work/GoLandProject/feidan-api/initialize/router.go:51	register swagger handler
+[feidan-api]2024/05/14 - 21:03:44.782	[34minfo[0m	D:/work/GoLandProject/feidan-api/initialize/router.go:60	router register success
+[feidan-api]2024/05/14 - 21:03:44.783	[34minfo[0m	D:/work/GoLandProject/feidan-api/core/server.go:21	server run success on 	{"address": ":9000"}
+[feidan-api]2024/05/14 - 21:04:12.676	[34minfo[0m	D:/work/GoLandProject/feidan-api/initialize/router.go:51	register swagger handler
+[feidan-api]2024/05/14 - 21:04:12.681	[34minfo[0m	D:/work/GoLandProject/feidan-api/initialize/router.go:60	router register success
+[feidan-api]2024/05/14 - 21:04:12.681	[34minfo[0m	D:/work/GoLandProject/feidan-api/core/server.go:21	server run success on 	{"address": ":9000"}
+[feidan-api]2024/05/14 - 21:05:09.332	[34minfo[0m	D:/work/GoLandProject/feidan-api/initialize/router.go:51	register swagger handler
+[feidan-api]2024/05/14 - 21:05:09.357	[34minfo[0m	D:/work/GoLandProject/feidan-api/initialize/router.go:60	router register success
+[feidan-api]2024/05/14 - 21:05:09.357	[34minfo[0m	D:/work/GoLandProject/feidan-api/core/server.go:21	server run success on 	{"address": ":9000"}
